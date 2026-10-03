@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: T.I. Básico
+  structure:
+    - type: space
+      key: space-curso
+      title: Curso T.I. Básico
+      path: curso
+      default: true
+      content:
+        directory: ./
