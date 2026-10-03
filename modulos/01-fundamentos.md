@@ -1,104 +1,99 @@
 # 1. Fundamentos de Informática
 
-> **Objetivo:** entender o que é um computador, suas partes, como os arquivos são organizados e o vocabulário básico de T.I.
+> **Objetivo:** entender as partes do computador, como os arquivos são guardados e as palavras que você mais vai ouvir no dia a dia.
 
-## 1.1 O que é Tecnologia da Informação (T.I.)
+## 1.1 O que é T.I.
 
-T.I. é a área que usa computadores, redes e programas para **armazenar, processar e transmitir informações**. Quem trabalha com T.I. pode atuar em suporte técnico, redes, programação, banco de dados, segurança, análise de dados e muito mais.
+T.I. (Tecnologia da Informação) é tudo que envolve computador, internet e programas para **guardar, organizar e enviar informações**. Quando alguém no trabalho diz "chama o pessoal da T.I.", está falando de quem cuida dos computadores, da internet e dos sistemas da empresa.
 
-## 1.2 Hardware x Software
+## 1.2 Hardware e software
 
-| Conceito | O que é | Exemplos |
+| Nome | O que é | Exemplos |
 |---|---|---|
-| **Hardware** | A parte física, que você toca | Monitor, teclado, mouse, processador, memória |
-| **Software** | A parte lógica, os programas | Windows, Excel, Chrome, WhatsApp |
-| **Firmware** | Software gravado dentro do hardware | BIOS/UEFI da placa-mãe |
+| **Hardware** | A parte física, que você pode tocar | Monitor, teclado, mouse, impressora |
+| **Software** | Os programas, a parte que você não toca | Windows, Excel, Google Chrome, WhatsApp |
 
-## 1.3 Componentes do computador
+> **Jeito fácil de lembrar:** se cair no chão e quebrar, é hardware. Se "travar", é software.
 
-- **Processador (CPU):** o "cérebro". Executa as instruções. Ex.: Intel Core i5, AMD Ryzen 5.
-- **Memória RAM:** memória temporária e rápida, usada pelos programas abertos. Apaga quando desliga. Ex.: 8 GB, 16 GB.
-- **Armazenamento (HD ou SSD):** onde ficam os arquivos de forma permanente. O SSD é muito mais rápido que o HD.
-- **Placa-mãe:** conecta todos os componentes.
-- **Placa de vídeo (GPU):** processa imagens; essencial para jogos, design e IA.
-- **Fonte de alimentação:** fornece energia aos componentes.
+## 1.3 As partes mais importantes do computador
 
-### Periféricos
+- **Processador:** o "cérebro" do computador. Quanto melhor, mais rápido tudo funciona.
+- **Memória RAM:** a "mesa de trabalho". Guarda o que está aberto agora. Quando desliga o computador, ela esvazia. Mais RAM = mais programas abertos ao mesmo tempo sem travar.
+- **HD ou SSD:** o "armário". É onde seus arquivos ficam guardados de vez, mesmo desligando. O **SSD** é bem mais rápido que o HD.
 
-| Tipo | Função | Exemplos |
+> **Exemplo:** você está escrevendo um documento (ele está na RAM, a mesa). Quando clica em **Salvar**, ele vai para o SSD (o armário). Se a luz acabar antes de salvar, o que estava só na mesa se perde.
+
+### Periféricos (o que se liga ao computador)
+
+| Tipo | Para que serve | Exemplos |
 |---|---|---|
-| Entrada | Enviam dados ao computador | Teclado, mouse, webcam, microfone, scanner |
-| Saída | Mostram/entregam dados | Monitor, impressora, caixa de som |
-| Entrada e saída | Fazem as duas coisas | Tela touch, pendrive, multifuncional |
+| Entrada | Você manda informação para o computador | Teclado, mouse, microfone, câmera |
+| Saída | O computador mostra ou entrega algo a você | Monitor, impressora, caixa de som |
+| Os dois | Faz as duas coisas | Pendrive, tela de toque |
 
-## 1.4 Unidades de medida
+## 1.4 Tamanho dos arquivos
 
-O computador trabalha com **bits** (0 ou 1). 8 bits formam 1 **byte** (um caractere, como a letra "A").
+Arquivos têm tamanho, como uma caixa pode ser pequena ou grande. Do menor para o maior:
 
-| Unidade | Equivale a | Exemplo prático |
-|---|---|---|
-| 1 KB (Kilobyte) | 1.024 bytes | Um documento de texto simples |
-| 1 MB (Megabyte) | 1.024 KB | Uma foto de celular (2 a 5 MB) |
-| 1 GB (Gigabyte) | 1.024 MB | Um filme (1 a 4 GB) |
-| 1 TB (Terabyte) | 1.024 GB | HD externo comum |
+| Medida | Exemplo do dia a dia |
+|---|---|
+| **KB** (kilobyte) | Um texto simples |
+| **MB** (megabyte) | Uma foto de celular (de 2 a 5 MB) |
+| **GB** (gigabyte) | Um filme (de 1 a 4 GB) |
+| **TB** (terabyte) | Um HD externo cheio de fotos e vídeos |
 
-> **Atenção:** internet é medida em **bits por segundo** (Mbps). Uma internet de 100 Mbps baixa cerca de 12,5 MB por segundo (100 / 8).
+Cada medida é cerca de **mil vezes** a anterior: 1 GB é mais ou menos mil MB.
+
+> **Internet é diferente:** a velocidade da internet é medida em **Mbps** (megabits). Para saber quantos MB por segundo você baixa, divida por 8. Internet de 100 Mbps baixa cerca de 12 MB por segundo.
 
 ## 1.5 Sistema operacional
 
-É o software principal, que gerencia o hardware e permite rodar outros programas.
+É o programa principal, que faz o computador funcionar e deixa você abrir os outros programas.
 
-- **Windows** (Microsoft): o mais usado em empresas e casas.
-- **macOS** (Apple): usado nos computadores Mac.
-- **Linux** (Ubuntu, Debian, Fedora): gratuito, muito usado em servidores.
-- **Android e iOS:** sistemas de celulares.
+- **Windows:** o mais usado em empresas e em casa. É o que este curso ensina.
+- **macOS:** usado nos computadores da Apple.
+- **Android e iOS (iPhone):** os sistemas dos celulares.
 
-## 1.6 Arquivos, pastas e extensões
+## 1.6 Arquivos e pastas
 
-- **Arquivo:** qualquer informação salva (documento, foto, música).
-- **Pasta (diretório):** "gaveta" que organiza arquivos.
-- **Caminho:** endereço do arquivo. Ex.: `C:\Users\Maria\Documentos\relatorio.xlsx`
-- **Extensão:** as letras depois do ponto, indicam o tipo do arquivo.
+- **Arquivo:** qualquer coisa salva: um documento, uma foto, uma planilha.
+- **Pasta:** uma "gaveta" para organizar arquivos. Uma pasta pode ter outras pastas dentro.
+- **Extensão:** as letras depois do ponto no nome do arquivo. Dizem que tipo de arquivo ele é.
 
-| Extensão | Tipo | Abre com |
+| Extensão | O que é | Abre com |
 |---|---|---|
 | .docx | Documento de texto | Word |
-| .xlsx / .xls / .csv | Planilha | Excel, Google Planilhas |
-| .pptx | Apresentação | PowerPoint |
-| .pdf | Documento portátil | Navegador, Adobe Reader |
-| .jpg / .png | Imagem | Visualizador de fotos |
-| .mp3 / .mp4 | Áudio / vídeo | Player de mídia |
-| .zip / .rar | Arquivo compactado | Explorador, WinRAR, 7-Zip |
-| .exe / .msi | Programa / instalador | Windows (cuidado com vírus!) |
-| .txt | Texto puro | Bloco de Notas |
+| .xlsx | Planilha | Excel ou Google Planilhas |
+| .pptx | Apresentação de slides | PowerPoint |
+| .pdf | Documento pronto para ler e imprimir | Navegador (Chrome, Edge) |
+| .jpg / .png | Foto ou imagem | Visualizador de fotos |
+| .mp3 / .mp4 | Música / vídeo | Player de mídia |
+| .zip | Vários arquivos "embalados" em um só | O próprio Windows |
+| .exe | Programa ou instalador | Windows (**cuidado:** pode ser vírus!) |
 
-> **Dica:** para ver as extensões no Windows, abra o Explorador de Arquivos, clique em **Exibir > Mostrar > Extensões de nomes de arquivos**.
+> **Dica:** para ver as extensões no Windows, abra uma pasta e clique em **Exibir > Mostrar > Extensões de nomes de arquivos**.
 
-## 1.7 Redes e Internet (conceitos)
+## 1.7 Internet e rede, sem complicação
 
-- **Rede local (LAN):** computadores conectados no mesmo local (casa, escritório).
-- **Wi-Fi:** rede sem fio.
-- **Roteador:** distribui a internet entre os dispositivos.
-- **Endereço IP:** "número de telefone" de cada dispositivo na rede. Ex.: `192.168.0.10`.
-- **DNS:** traduz nomes (google.com) em endereços IP.
-- **Nuvem (cloud):** guardar arquivos e usar programas pela internet (Google Drive, OneDrive, Dropbox).
+- **Wi-Fi:** internet sem fio.
+- **Roteador:** a caixinha com luzes que distribui a internet pela casa ou escritório.
+- **Navegador:** o programa para entrar em sites (Chrome, Edge, Firefox).
+- **Nuvem:** guardar arquivos na internet em vez de no computador (Google Drive, OneDrive). Você acessa de qualquer lugar e não perde se o computador quebrar.
 
-## 1.8 Glossário rápido
+## 1.8 Palavras que você vai ouvir
 
-| Termo | Significado |
+| Palavra | O que significa |
 |---|---|
-| Backup | Cópia de segurança dos arquivos |
-| Download | Baixar algo da internet para o computador |
-| Upload | Enviar algo do computador para a internet |
-| Driver | Programa que faz o Windows reconhecer um hardware |
-| Navegador | Programa para acessar sites (Chrome, Edge, Firefox) |
+| Backup | Uma cópia de segurança dos seus arquivos |
+| Download (baixar) | Trazer algo da internet para o computador |
+| Upload (enviar) | Mandar algo do computador para a internet |
 | Login | Entrar em um sistema com usuário e senha |
-| Atualização | Nova versão de um programa com correções |
-| Malware | Programa malicioso (vírus, ransomware, spyware) |
+| Atualização | Nova versão de um programa, com correções |
+| Vírus (malware) | Programa feito para estragar ou roubar dados |
 
 ## Resumo do módulo
 
-- Hardware é físico, software é lógico.
-- RAM é temporária, SSD/HD é permanente.
-- A extensão do arquivo indica seu tipo.
-- Internet é medida em bits; arquivos, em bytes.
+- Hardware você toca; software são os programas.
+- RAM é a mesa (temporária); SSD/HD é o armário (permanente). Salve sempre!
+- A extensão (.xlsx, .pdf...) diz o tipo do arquivo.
+- Nuvem = seus arquivos guardados na internet.

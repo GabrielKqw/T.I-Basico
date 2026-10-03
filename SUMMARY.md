@@ -7,7 +7,7 @@
 * [1. Fundamentos de Informática](modulos/01-fundamentos.md)
 * [2. Windows e Atalhos de Teclado](modulos/02-windows-atalhos.md)
 * [3. Comandos do Prompt (CMD)](modulos/03-comandos-cmd.md)
-* [4. PowerShell e Terminal Linux](modulos/04-powershell-linux.md)
+* [4. PowerShell](modulos/04-powershell.md)
 * [5. Internet, E-mail e Segurança](modulos/05-internet-seguranca.md)
 
 ## Parte 2 - Excel e Planilhas

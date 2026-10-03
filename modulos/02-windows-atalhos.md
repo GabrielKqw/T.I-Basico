@@ -1,130 +1,96 @@
 # 2. Windows e Atalhos de Teclado
 
-> **Objetivo:** usar o Windows com agilidade, organizar arquivos e dominar os atalhos que economizam horas de trabalho.
+> **Objetivo:** usar o Windows com tranquilidade, organizar seus arquivos e aprender os atalhos que fazem você trabalhar muito mais rápido.
 
-## 2.1 Partes da tela do Windows
+## 2.1 As partes da tela
 
-- **Área de trabalho:** tela principal com ícones.
-- **Barra de tarefas:** barra inferior com o menu Iniciar, programas abertos e relógio.
-- **Menu Iniciar:** acessa programas, configurações e desligar.
-- **Bandeja do sistema:** ícones de rede, som, bateria (canto inferior direito).
-- **Explorador de Arquivos:** gerencia pastas e arquivos (atalho `Win + E`).
+- **Área de trabalho:** a tela principal, com os ícones.
+- **Barra de tarefas:** a barra lá embaixo. Mostra os programas abertos e o relógio.
+- **Menu Iniciar:** o botão com o símbolo do Windows. Por ele você abre programas e desliga o computador.
+- **Explorador de Arquivos:** o programa das pastas (ícone de pasta amarela). É onde você encontra seus arquivos.
 
-## 2.2 Operações com arquivos
+## 2.2 O que é um atalho de teclado
 
-| Ação | Como fazer |
-|---|---|
-| Criar pasta | Botão direito > Novo > Pasta, ou `Ctrl + Shift + N` |
-| Renomear | Selecione e pressione `F2` |
-| Copiar | `Ctrl + C` e depois `Ctrl + V` no destino |
-| Mover (recortar) | `Ctrl + X` e depois `Ctrl + V` no destino |
-| Excluir (lixeira) | `Delete` |
-| Excluir definitivo | `Shift + Delete` (não vai para a lixeira!) |
-| Selecionar vários | `Ctrl + clique` (um a um) ou `Shift + clique` (intervalo) |
-| Compactar (.zip) | Botão direito > Compactar para arquivo ZIP |
-| Ver propriedades | `Alt + Enter` |
+É apertar duas ou mais teclas **juntas** para fazer algo sem precisar do mouse. Quando você ler `Ctrl + C`, significa: **segure** a tecla `Ctrl`, aperte `C` e solte as duas.
 
-## 2.3 Atalhos gerais (funcionam em quase todos os programas)
+> **Onde ficam as teclas:** `Ctrl` e `Alt` ficam no canto de baixo do teclado. A tecla `Win` é a que tem o símbolo do Windows. `Shift` é a da seta para cima, acima do `Ctrl`.
 
-| Atalho | Função |
+## 2.3 Os atalhos mais importantes (aprenda estes primeiro)
+
+| Atalho | O que faz |
 |---|---|
 | `Ctrl + C` | Copiar |
-| `Ctrl + X` | Recortar |
 | `Ctrl + V` | Colar |
-| `Ctrl + Z` | Desfazer |
+| `Ctrl + X` | Recortar (tira de um lugar para colar em outro) |
+| `Ctrl + Z` | Desfazer (voltar o que você acabou de fazer) |
 | `Ctrl + Y` | Refazer |
-| `Ctrl + A` | Selecionar tudo |
-| `Ctrl + S` | Salvar (no Word/Excel em português: `Ctrl + B`) |
 | `Ctrl + P` | Imprimir |
-| `Ctrl + F` | Localizar |
-| `Ctrl + N` | Novo arquivo/janela |
-| `Ctrl + O` | Abrir arquivo |
-| `Ctrl + W` | Fechar janela/aba atual |
+| `Ctrl + F` | Procurar uma palavra na tela |
+| `Alt + Tab` | Trocar entre as janelas abertas |
 | `Alt + F4` | Fechar o programa |
-| `Alt + Tab` | Alternar entre janelas abertas |
-| `F5` | Atualizar |
-
-> **Atenção - Office em português:** no Word e no Excel em pt-BR alguns atalhos mudam: `Ctrl + B` = Salvar, `Ctrl + N` = Negrito, `Ctrl + S` = Sublinhado, `Ctrl + I` = Itálico, `Ctrl + O` = Novo, `Ctrl + A` = Abrir (no Excel, `Ctrl + T` seleciona tudo). Nas versões em inglês valem os atalhos da tabela acima.
-
-## 2.4 Atalhos com a tecla Windows
-
-| Atalho | Função |
-|---|---|
-| `Win` | Abre o menu Iniciar |
-| `Win + D` | Mostrar a área de trabalho |
-| `Win + E` | Abrir o Explorador de Arquivos |
 | `Win + L` | Bloquear o computador (use sempre que sair da mesa!) |
-| `Win + I` | Abrir Configurações |
-| `Win + R` | Abrir o "Executar" |
-| `Win + V` | Histórico da área de transferência |
-| `Win + Shift + S` | Capturar parte da tela (print) |
-| `PrtScn` | Print da tela inteira |
-| `Win + .` | Painel de emojis |
-| `Win + Seta` | Encaixar janela à esquerda/direita/maximizar |
-| `Win + Tab` | Visão de tarefas e áreas de trabalho virtuais |
-| `Win + Ctrl + D` | Criar nova área de trabalho virtual |
-| `Win + X` | Menu de administração rápida |
-| `Win + número` | Abrir o programa fixado na barra de tarefas naquela posição |
-| `Ctrl + Shift + Esc` | Abrir o Gerenciador de Tarefas |
 
-## 2.5 Atalhos de texto
+> **Atenção no Word e no Excel em português:** alguns atalhos mudam. Para **salvar** use `Ctrl + B`; para **negrito** use `Ctrl + N`. Nos outros programas (e no Office em inglês), salvar é `Ctrl + S`.
 
-| Atalho | Função |
+## 2.4 Mexendo com arquivos e pastas
+
+| O que fazer | Como fazer |
 |---|---|
-| `Ctrl + Seta` | Pular palavra por palavra |
-| `Ctrl + Shift + Seta` | Selecionar palavra por palavra |
-| `Home` / `End` | Início / fim da linha |
-| `Ctrl + Home` / `Ctrl + End` | Início / fim do documento |
-| `Ctrl + Backspace` | Apagar a palavra anterior |
+| Criar uma pasta | Botão direito do mouse > **Novo** > **Pasta** |
+| Mudar o nome | Clique no arquivo e aperte `F2` |
+| Copiar | `Ctrl + C` e depois `Ctrl + V` onde quer a cópia |
+| Mover | `Ctrl + X` e depois `Ctrl + V` no novo lugar |
+| Apagar (vai para a lixeira) | Tecla `Delete` |
+| Escolher vários | Segure `Ctrl` e clique em cada um |
+| Juntar vários em um .zip | Botão direito > **Compactar para arquivo ZIP** |
 
-## 2.6 Atalhos do navegador
+> **Cuidado:** `Shift + Delete` apaga **sem passar pela lixeira**. Não dá para recuperar.
 
-| Atalho | Função |
+## 2.5 Atalhos com a tecla Windows
+
+| Atalho | O que faz |
+|---|---|
+| `Win` | Abre o menu Iniciar (depois é só digitar o nome do programa) |
+| `Win + E` | Abre as pastas (Explorador de Arquivos) |
+| `Win + D` | Esconde tudo e mostra a área de trabalho |
+| `Win + L` | Bloqueia o computador |
+| `Win + Shift + S` | Tira um print de um pedaço da tela |
+| `Win + V` | Mostra as últimas coisas que você copiou |
+| `Win + .` | Abre os emojis 😀 |
+| `Win + seta` | Encaixa a janela na metade da tela |
+| `Ctrl + Shift + Esc` | Abre o Gerenciador de Tarefas (para fechar programa travado) |
+
+## 2.6 Atalhos para escrever textos
+
+| Atalho | O que faz |
+|---|---|
+| `Ctrl + A` | Selecionar tudo |
+| `Ctrl + setas` | Pular de palavra em palavra |
+| `Home` / `End` | Ir para o começo / fim da linha |
+| `Ctrl + Backspace` | Apagar a palavra inteira de uma vez |
+
+## 2.7 Atalhos do navegador (Chrome, Edge)
+
+| Atalho | O que faz |
 |---|---|
 | `Ctrl + T` | Nova aba |
-| `Ctrl + Shift + T` | Reabrir aba fechada |
-| `Ctrl + Tab` | Próxima aba |
-| `Ctrl + L` | Ir para a barra de endereço |
-| `Ctrl + D` | Adicionar aos favoritos |
-| `Ctrl + H` | Histórico |
-| `Ctrl + J` | Downloads |
-| `Ctrl + Shift + N` | Janela anônima (Chrome) |
-| `Ctrl + +` / `Ctrl + -` | Aumentar / diminuir zoom |
+| `Ctrl + W` | Fechar a aba |
+| `Ctrl + Shift + T` | Reabrir a aba que você fechou sem querer |
+| `Ctrl + D` | Salvar o site nos favoritos |
+| `Ctrl + J` | Ver seus downloads |
+| `Ctrl + +` / `Ctrl + -` | Aumentar / diminuir o tamanho da letra da página |
 
-## 2.7 Comandos do "Executar" (Win + R)
+## 2.8 Resolvendo problemas simples
 
-Digite o comando e pressione Enter:
-
-| Comando | Abre |
-|---|---|
-| `calc` | Calculadora |
-| `notepad` | Bloco de Notas |
-| `mspaint` | Paint |
-| `cmd` | Prompt de Comando |
-| `powershell` | PowerShell |
-| `control` | Painel de Controle |
-| `taskmgr` | Gerenciador de Tarefas |
-| `msconfig` | Configuração do sistema |
-| `appwiz.cpl` | Programas e Recursos (desinstalar) |
-| `devmgmt.msc` | Gerenciador de Dispositivos |
-| `diskmgmt.msc` | Gerenciamento de Disco |
-| `services.msc` | Serviços do Windows |
-| `cleanmgr` | Limpeza de Disco |
-| `%temp%` | Pasta de arquivos temporários |
-| `excel` / `winword` | Excel / Word |
-| `dxdiag` | Informações de vídeo e sistema |
-| `winver` | Versão do Windows |
-
-## 2.8 Manutenção básica
-
-- **Atualizações:** Configurações > Windows Update. Mantenha sempre em dia.
-- **Liberar espaço:** `cleanmgr` ou Configurações > Sistema > Armazenamento.
-- **Programa travado:** `Ctrl + Shift + Esc` > selecione > **Finalizar tarefa**.
-- **Desinstalar programas:** Configurações > Aplicativos.
-- **Backup:** use OneDrive, Google Drive ou um HD externo.
+- **Programa travou:** aperte `Ctrl + Shift + Esc`, clique no programa travado e em **Finalizar tarefa**.
+- **Computador lento ou estranho:** antes de tudo, **reinicie**. Resolve muita coisa.
+- **Atualizações:** de vez em quando, abra o menu Iniciar, digite **Windows Update** e instale o que aparecer.
+- **Disco cheio:** menu Iniciar > digite **Armazenamento** > apague arquivos temporários.
+- **Desinstalar um programa:** menu Iniciar > digite **Aplicativos** > encontre o programa > Desinstalar.
 
 ## Resumo do módulo
 
-- Aprenda primeiro: `Ctrl + C/V/X/Z/S`, `Alt + Tab`, `Win + E`, `Win + L`, `Win + Shift + S`.
-- `F2` renomeia, `Shift + Delete` apaga sem lixeira.
-- `Win + R` abre ferramentas do sistema com comandos rápidos.
+- Comece por: `Ctrl + C`, `Ctrl + V`, `Ctrl + Z`, `Alt + Tab`, `Win + L`, `Win + Shift + S`.
+- `F2` muda o nome do arquivo.
+- `Shift + Delete` apaga para sempre: cuidado!
+- Programa travou? `Ctrl + Shift + Esc`.

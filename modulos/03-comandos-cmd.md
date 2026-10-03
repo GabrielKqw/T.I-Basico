@@ -1,151 +1,105 @@
 # 3. Comandos do Prompt (CMD)
 
-> **Objetivo:** usar o Prompt de Comando do Windows para navegar em pastas, gerenciar arquivos e diagnosticar problemas de rede e sistema, como um técnico de suporte.
+> **Objetivo:** conhecer a "tela preta" do Windows e alguns comandos simples que ajudam a resolver problemas de internet e do computador.
 
-## 3.1 Abrindo o Prompt de Comando
+## 3.1 O que é o Prompt de Comando
 
-- Pressione `Win + R`, digite `cmd` e Enter.
-- Ou: menu Iniciar > digite "cmd" > **Executar como administrador** (para comandos que exigem permissão).
+É uma janela onde, em vez de clicar, você **digita ordens** para o computador. Parece coisa de hacker, mas é só um outro jeito de usar o Windows. O pessoal de suporte usa muito, porque alguns problemas se resolvem mais rápido assim.
 
-A tela mostra algo como:
+**Como abrir:** aperte `Win + R`, digite `cmd` e aperte `Enter`.
+
+Vai aparecer algo assim:
 
 ```
 C:\Users\Maria>
 ```
 
-Isso é o **prompt**: indica a pasta atual. Você digita o comando e pressiona Enter.
+Isso mostra **em qual pasta você está**. Você digita o comando depois do `>` e aperta `Enter`.
 
-> **Dica:** use a tecla `Tab` para completar nomes de pastas e as setas `Cima/Baixo` para repetir comandos anteriores. `Ctrl + C` cancela um comando em execução.
+> **Fique tranquilo:** os comandos deste módulo só **mostram informações** ou fazem coisas simples. Você não vai estragar nada. Os únicos que apagam coisas estão marcados com aviso.
 
-## 3.2 Navegação entre pastas
+### Dicas para não se perder
 
-| Comando | Função | Exemplo |
+- Errou? Aperte `Esc` para apagar a linha.
+- A seta para cima `↑` repete o último comando digitado.
+- `cls` limpa a tela.
+- `Ctrl + C` para um comando que não acaba nunca.
+
+## 3.2 Andando pelas pastas
+
+| Comando | O que faz | Exemplo |
 |---|---|---|
-| `cd` | Mostra a pasta atual | `cd` |
-| `cd pasta` | Entra em uma pasta | `cd Documentos` |
-| `cd ..` | Volta uma pasta | `cd ..` |
-| `cd \` | Vai para a raiz do disco | `cd \` |
-| `D:` | Troca de unidade | `D:` |
-| `dir` | Lista arquivos e pastas | `dir` |
-| `dir /a` | Lista inclusive ocultos | `dir /a` |
-| `dir *.xlsx` | Lista só planilhas | `dir *.xlsx` |
-| `dir /s nome` | Procura em subpastas | `dir /s relatorio.docx` |
-| `tree` | Mostra a árvore de pastas | `tree /f` |
+| `dir` | Mostra o que tem na pasta | `dir` |
+| `cd nome` | Entra em uma pasta | `cd Documents` |
+| `cd ..` | Volta para a pasta anterior | `cd ..` |
 | `cls` | Limpa a tela | `cls` |
 
-> Se o nome tiver espaços, use aspas: `cd "Meus Documentos"`.
+> Se o nome da pasta tiver espaço, coloque entre aspas: `cd "Meus Arquivos"`.
 
-## 3.3 Arquivos e pastas
+## 3.3 Criando e organizando
 
-| Comando | Função | Exemplo |
+| Comando | O que faz | Exemplo |
 |---|---|---|
-| `mkdir` ou `md` | Cria pasta | `mkdir Relatorios` |
-| `rmdir` ou `rd` | Remove pasta vazia | `rd Antiga` |
-| `rd /s /q` | Remove pasta e tudo dentro | `rd /s /q Temp` |
-| `copy` | Copia arquivo | `copy nota.txt D:\Backup` |
-| `xcopy /e` | Copia pasta inteira | `xcopy Docs D:\Backup\Docs /e /i` |
-| `robocopy` | Cópia robusta (backup) | `robocopy C:\Docs D:\Backup /e` |
-| `move` | Move ou renomeia | `move nota.txt Arquivo\` |
-| `ren` | Renomeia | `ren antigo.txt novo.txt` |
-| `del` | Apaga arquivo | `del lixo.txt` |
-| `del *.tmp` | Apaga por padrão | `del *.tmp` |
-| `type` | Mostra conteúdo de texto | `type leia-me.txt` |
-| `echo` | Escreve texto | `echo Olá > arquivo.txt` |
-| `echo >>` | Adiciona ao final | `echo linha2 >> arquivo.txt` |
-| `start` | Abre arquivo/programa | `start planilha.xlsx` |
-| `attrib` | Atributos (oculto, somente leitura) | `attrib -h -s -r E:\*.* /s /d` |
+| `mkdir nome` | Cria uma pasta | `mkdir Relatorios` |
+| `copy` | Copia um arquivo | `copy nota.txt D:\` |
+| `ren` | Muda o nome de um arquivo | `ren antigo.txt novo.txt` |
+| `del` | **Apaga** um arquivo (não vai para a lixeira!) | `del lixo.txt` |
+| `start` | Abre um arquivo ou programa | `start planilha.xlsx` |
 
-> **Cuidado:** `del` e `rd /s /q` não enviam para a lixeira. Confira antes de apagar.
+## 3.4 Informações do computador
 
-> **Dica de suporte:** `attrib -h -s -r E:\*.* /s /d` recupera arquivos que um vírus "escondeu" em um pendrive (troque `E:` pela letra do pendrive).
-
-## 3.4 Informações do sistema
-
-| Comando | Função |
+| Comando | O que mostra |
 |---|---|
-| `systeminfo` | Informações completas do computador |
-| `hostname` | Nome do computador |
-| `whoami` | Usuário logado |
-| `ver` | Versão do Windows |
-| `tasklist` | Lista os programas em execução |
-| `taskkill /im nome.exe /f` | Força o fechamento de um programa |
-| `date` / `time` | Data e hora |
-| `wmic bios get serialnumber` | Número de série do computador |
+| `hostname` | O nome do computador |
+| `whoami` | Qual usuário está usando o computador |
+| `systeminfo` | Tudo sobre o computador (memória, Windows, data de instalação) |
+| `tasklist` | Os programas que estão abertos agora |
 
-## 3.5 Rede (os mais usados no suporte)
+> **Útil no trabalho:** quando o suporte pergunta "qual o nome do seu computador?", é só digitar `hostname`.
 
-| Comando | Função |
+## 3.5 A internet não funciona? Use estes
+
+| Comando | O que faz |
 |---|---|
-| `ipconfig` | Mostra IP, máscara e gateway |
-| `ipconfig /all` | Detalhes completos (inclui endereço MAC e DNS) |
-| `ipconfig /release` | Libera o IP atual |
-| `ipconfig /renew` | Pede um novo IP ao roteador |
-| `ipconfig /flushdns` | Limpa o cache de DNS (resolve sites que não abrem) |
-| `ping google.com` | Testa se há comunicação com um endereço |
-| `ping -t 8.8.8.8` | Ping contínuo (pare com `Ctrl + C`) |
-| `tracert google.com` | Mostra o caminho até o destino |
-| `nslookup google.com` | Consulta o DNS |
-| `netstat -an` | Conexões de rede ativas |
-| `getmac` | Endereço físico (MAC) da placa de rede |
-| `netsh wlan show profiles` | Redes Wi-Fi salvas |
-| `netsh wlan show profile name="MinhaRede" key=clear` | Mostra a senha de uma rede Wi-Fi salva |
+| `ipconfig` | Mostra o "endereço" do seu computador na rede |
+| `ping google.com` | Testa se a internet chega até o Google |
+| `ipconfig /flushdns` | Limpa a memória de sites (resolve site que não abre) |
 
-### Roteiro de diagnóstico "a internet não funciona"
+### Passo a passo quando a internet cai
 
-```
-ipconfig              (tem IP? se começar com 169.254, não pegou IP do roteador)
-ping 192.168.0.1      (responde o roteador? use o "Gateway padrão" do ipconfig)
-ping 8.8.8.8          (chega na internet?)
-ping google.com       (o DNS funciona? se o anterior funcionou e este não, é DNS)
-ipconfig /flushdns    (limpa o DNS)
-ipconfig /release
-ipconfig /renew       (renova o IP)
-```
+1. Digite `ping google.com` e aperte `Enter`.
+   - Se aparecer **"Resposta de..."** quatro vezes: a internet está funcionando. O problema é no site ou no navegador.
+   - Se aparecer **"Esgotado o tempo"** ou **"não encontrou o host"**: siga para o passo 2.
+2. Digite `ipconfig /flushdns` e tente abrir o site de novo.
+3. Ainda não foi? Desligue o roteador da tomada, espere 30 segundos e ligue de novo.
+4. Nada resolveu? Chame o suporte e conte o que você já testou. Isso ajuda muito!
 
-## 3.6 Disco e manutenção (executar como administrador)
+## 3.6 Desligar e reiniciar por comando
 
-| Comando | Função |
+| Comando | O que faz |
 |---|---|
-| `chkdsk C:` | Verifica erros no disco |
-| `chkdsk C: /f` | Verifica e corrige (pode pedir reinício) |
-| `sfc /scannow` | Verifica e repara arquivos do Windows |
-| `DISM /Online /Cleanup-Image /RestoreHealth` | Repara a imagem do Windows |
-| `cleanmgr` | Limpeza de disco |
-| `defrag C: /o` | Otimiza o disco |
 | `shutdown /s /t 0` | Desliga agora |
 | `shutdown /r /t 0` | Reinicia agora |
-| `shutdown /s /t 3600` | Desliga em 1 hora |
-| `shutdown /a` | Cancela o desligamento agendado |
-| `gpupdate /force` | Atualiza políticas de grupo (empresas) |
+| `shutdown /s /t 3600` | Desliga daqui a 1 hora (3600 segundos) |
+| `shutdown /a` | Cancela o desligamento marcado |
 
-## 3.7 Ajuda
+## 3.7 Consertar arquivos do Windows
 
-Todo comando tem ajuda embutida:
-
-```
-comando /?
-```
-
-Exemplo: `copy /?` mostra todas as opções do `copy`. O comando `help` lista os comandos disponíveis.
-
-## 3.8 Seu primeiro script (.bat)
-
-Crie no Bloco de Notas um arquivo `backup.bat` com:
+Se o Windows estiver dando erros estranhos, o suporte pode pedir para você rodar:
 
 ```
-@echo off
-echo Iniciando backup...
-robocopy "%USERPROFILE%\Documents" "D:\Backup\Documentos" /e
-echo Backup concluido!
-pause
+sfc /scannow
 ```
 
-Dê dois cliques no arquivo e ele copiará seus Documentos para `D:\Backup`. Pronto: você automatizou uma tarefa!
+Ele procura e conserta arquivos do Windows sozinho. Para funcionar, abra o CMD **como administrador**: menu Iniciar > digite `cmd` > clique em **Executar como administrador**. Demora alguns minutos.
+
+## 3.8 Precisa de ajuda?
+
+Digite o comando seguido de `/?` para ver tudo o que ele faz. Exemplo: `copy /?`
 
 ## Resumo do módulo
 
-- Navegação: `cd`, `dir`, `cls`.
-- Arquivos: `mkdir`, `copy`, `move`, `ren`, `del`.
-- Rede: `ipconfig`, `ping`, `tracert`, `nslookup`.
-- Reparos: `sfc /scannow`, `chkdsk`, `DISM`.
-- Dúvida? `comando /?`.
+- Abrir: `Win + R` > `cmd` > `Enter`.
+- Pastas: `dir` mostra, `cd` entra, `cd ..` volta.
+- Internet: `ping google.com` testa, `ipconfig /flushdns` limpa.
+- `del` apaga sem lixeira. Cuidado!

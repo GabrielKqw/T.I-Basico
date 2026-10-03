@@ -1,83 +1,68 @@
 # 9. Google Planilhas
 
-> **Objetivo:** usar o Google Planilhas (Google Sheets), a alternativa gratuita e online ao Excel, e conhecer suas funções exclusivas.
+> **Objetivo:** usar o Google Planilhas, o "Excel gratuito do Google", que funciona direto no navegador.
 
 ## 9.1 Por que usar
 
-- **Gratuito:** basta uma conta Google (sheets.google.com).
-- **Na nuvem:** salva automaticamente e abre em qualquer computador ou celular.
-- **Colaboração em tempo real:** várias pessoas editando juntas, com comentários e histórico.
-- **Compatível com Excel:** abre e exporta `.xlsx`.
+- **De graça:** só precisa de uma conta Google (a mesma do Gmail).
+- **Salva sozinho:** não existe "esqueci de salvar".
+- **Abre em qualquer lugar:** no computador do trabalho, de casa ou no celular.
+- **Várias pessoas ao mesmo tempo:** cada um vê o que o outro está digitando.
+- **Conversa com o Excel:** abre arquivos `.xlsx` e salva como `.xlsx`.
 
-## 9.2 Diferenças em relação ao Excel
+**Como começar:** entre em **sheets.google.com** ou, no Google Drive, clique em **Novo > Planilhas Google**.
+
+## 9.2 O que muda em relação ao Excel
 
 | Item | Excel | Google Planilhas |
 |---|---|---|
-| Salvar | Manual (`Ctrl + B`/`Ctrl + S`) ou AutoSalvamento no OneDrive | Automático |
-| Compartilhar | OneDrive/SharePoint | Botão **Compartilhar** (leitor, comentarista, editor) |
-| Histórico | Histórico de Versões | Arquivo > Histórico de versões |
-| Automação | VBA / Office Scripts | Apps Script (JavaScript) |
-| Funções | A maioria igual | Iguais + funções exclusivas (abaixo) |
-| Tabela dinâmica | Inserir > Tabela Dinâmica | Inserir > Tabela dinâmica |
-| Limite | 1.048.576 linhas | 10 milhões de células por arquivo |
+| Salvar | Você salva (`Ctrl + B`) | Salva sozinho |
+| Onde fica o arquivo | No computador (ou OneDrive) | No Google Drive |
+| Compartilhar | Pelo OneDrive | Botão verde **Compartilhar** |
+| Funções | `SOMA`, `SE`, `PROCV`... | **As mesmas**, com os mesmos nomes |
 
-> As funções têm os **mesmos nomes** em português: `SOMA`, `SE`, `PROCV`, `SOMASES`, `PROCX`, `FILTER`... O separador também é `;` quando a planilha está em português (Arquivo > Configurações > Localidade: Brasil).
+> Tudo o que você aprendeu de fórmulas nos módulos 6 e 7 funciona aqui do mesmo jeito.
 
-## 9.3 Funções exclusivas do Google Planilhas
+## 9.3 Compartilhando do jeito certo
 
-| Função | O que faz | Exemplo |
-|---|---|---|
-| `QUERY` | Consulta os dados com linguagem parecida com SQL | `=QUERY(A1:E100;"select A, sum(E) group by A";1)` |
-| `IMPORTRANGE` | Traz dados de outra planilha | `=IMPORTRANGE("URL_da_planilha";"Vendas!A1:E100")` |
-| `GOOGLETRANSLATE` | Traduz texto | `=GOOGLETRANSLATE(A2;"pt";"en")` |
-| `GOOGLEFINANCE` | Cotações de ações e moedas | `=GOOGLEFINANCE("CURRENCY:USDBRL")` |
-| `IMAGE` | Insere imagem pela URL | `=IMAGE("https://.../logo.png")` |
-| `SPARKLINE` | Minigráfico na célula | `=SPARKLINE(B2:M2)` |
-| `ARRAYFORMULA` | Aplica a fórmula à coluna inteira | `=ARRAYFORMULA(B2:B*C2:C)` |
-| `IMPORTHTML` | Importa tabela de um site | `=IMPORTHTML("URL";"table";1)` |
-| `SPLIT` | Divide texto | `=SPLIT(A2;",")` |
-| `REGEXEXTRACT` | Extrai texto por padrão | `=REGEXEXTRACT(A2;"\d+")` (números) |
-| `DETECTLANGUAGE` | Detecta o idioma | `=DETECTLANGUAGE(A2)` |
+Clique em **Compartilhar** (canto de cima, à direita), digite o e-mail da pessoa e escolha o que ela pode fazer:
 
-### QUERY na prática
+| Permissão | A pessoa pode... |
+|---|---|
+| **Leitor** | Só ver |
+| **Comentarista** | Ver e deixar comentários |
+| **Editor** | Ver e mudar tudo |
 
-Com os dados de vendas (A = Vendedor, B = Região, C = Produto, D = Data, E = Valor):
-
-```
-=QUERY(A1:E100;"select A, sum(E) where B = 'Sul' group by A order by sum(E) desc";1)
-```
-
-Resultado: total vendido por vendedor da região Sul, do maior para o menor.
+> **Cuidado com "Qualquer pessoa com o link":** quem receber o link (mesmo encaminhado) consegue abrir. Não use isso para planilhas com dados de clientes.
 
 ## 9.4 Recursos úteis
 
-- **Filtros e visualizações de filtro:** cada pessoa filtra sem atrapalhar os outros.
-- **Validação de dados:** Dados > Validação de dados (listas suspensas, caixas de seleção).
-- **Caixa de seleção:** Inserir > Caixa de seleção (ótimo para checklists).
-- **Formatação condicional:** Formatar > Formatação condicional.
-- **Proteger intervalos:** Dados > Proteger páginas e intervalos.
-- **Formulários:** Ferramentas > Criar um formulário (as respostas caem direto na planilha).
-- **Explorar / Gemini:** botão no canto inferior direito ou painel lateral sugere gráficos e análises por IA.
-- **Atalhos:** `Ctrl + /` mostra todos os atalhos.
+- **Voltar uma versão antiga:** Arquivo > **Histórico de versões**. Dá para ver quem mudou o quê e desfazer.
+- **Caixa de seleção (checklist ✓):** Inserir > **Caixa de seleção**.
+- **Lista de opções:** Inserir > **Menu suspenso**.
+- **Cores automáticas:** Formatar > **Formatação condicional**.
+- **Tabela dinâmica:** Inserir > **Tabela dinâmica** (funciona igual à do Excel).
+- **Ver todos os atalhos:** `Ctrl + /`.
 
-## 9.5 Apps Script (automação)
+## 9.5 Funções que só o Google tem
 
-Extensões > **Apps Script**. Exemplo que envia um e-mail com o total de vendas:
+| Função | O que faz | Exemplo |
+|---|---|---|
+| `GOOGLETRANSLATE` | Traduz um texto | `=GOOGLETRANSLATE(A2;"pt";"en")` |
+| `GOOGLEFINANCE` | Mostra a cotação do dólar e de outras moedas | `=GOOGLEFINANCE("CURRENCY:USDBRL")` |
+| `IMAGE` | Mostra uma imagem dentro da célula | `=IMAGE("endereço da imagem")` |
 
-```
-function enviarResumo() {
-  const aba = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Vendas");
-  const total = aba.getRange("E2:E").getValues().flat()
-                   .filter(Number).reduce((a, b) => a + b, 0);
-  MailApp.sendEmail("gestor@empresa.com", "Resumo de vendas",
-                    "Total vendido: R$ " + total.toFixed(2));
-}
-```
+## 9.6 Levando um arquivo do Excel para o Google
 
-Em **Acionadores** (ícone de relógio) você agenda o script para rodar todo dia.
+1. Abra o **Google Drive** (drive.google.com).
+2. Clique em **Novo** > **Upload de arquivo** e escolha o `.xlsx`.
+3. Dê dois cliques no arquivo e escolha **Abrir com Planilhas Google**.
+
+E o caminho de volta: no Google Planilhas, **Arquivo > Fazer download > Microsoft Excel (.xlsx)**.
 
 ## Resumo do módulo
 
-- Google Planilhas é gratuito, online e colaborativo.
-- As funções do Excel funcionam quase todas iguais.
-- Exclusivas poderosas: `QUERY`, `IMPORTRANGE`, `GOOGLETRANSLATE`, `ARRAYFORMULA`.
+- Gratuito, salva sozinho e abre em qualquer lugar.
+- As fórmulas são as mesmas do Excel.
+- Compartilhe escolhendo Leitor, Comentarista ou Editor.
+- Errou? **Histórico de versões** volta atrás.

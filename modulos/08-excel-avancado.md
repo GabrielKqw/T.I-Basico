@@ -1,223 +1,122 @@
 # 8. Excel: Recursos Avançados
 
-> **Objetivo:** organizar e analisar dados como um profissional: tabelas, filtros, formatação condicional, validação, gráficos, tabela dinâmica, Power Query e macros.
+> **Objetivo:** organizar e analisar dados como no trabalho de verdade: filtros, cores automáticas, listas de opções, gráficos e tabela dinâmica.
 
-## 8.1 Regras de uma base de dados bem feita
+## 8.1 Antes de tudo: organize os dados
 
-Antes de qualquer recurso avançado, organize os dados assim:
+Os recursos deste módulo funcionam bem quando a tabela segue estas regras:
 
-- **Uma linha de cabeçalho** com nomes únicos (sem células mescladas).
-- **Uma informação por coluna** (Nome em uma coluna, Sobrenome em outra).
-- **Um registro por linha** (cada venda em uma linha).
-- **Sem linhas ou colunas em branco** no meio dos dados.
-- **Sem totais no meio** da base: calcule em outra área ou use tabela dinâmica.
+- **A primeira linha é o cabeçalho**, com o nome de cada coluna.
+- **Uma informação por coluna:** nome em uma, cidade em outra.
+- **Uma linha para cada registro:** cada venda em uma linha.
+- **Sem linhas em branco** no meio da tabela.
+- **Sem células mescladas** (juntadas) no meio dos dados.
 
-## 8.2 Tabelas (Formatar como Tabela)
+## 8.2 Transformar em Tabela
 
-Selecione os dados e pressione `Ctrl + Alt + T` (pt-BR) ou `Ctrl + T` (inglês).
+Clique em qualquer lugar dos dados e aperte `Ctrl + Alt + T` (no Excel em inglês, `Ctrl + T`). Confirme com **OK**.
 
-Vantagens:
+O que você ganha:
 
-- Filtros automáticos e linhas zebradas.
-- **Crescem sozinhas:** fórmulas, gráficos e tabelas dinâmicas acompanham os novos dados.
-- **Colunas calculadas:** digite a fórmula em uma linha e ela é aplicada à coluna inteira.
-- **Linha de totais:** Design da Tabela > Linha de Totais.
-- **Referências estruturadas:** em vez de `E2:E100`, use o nome da coluna.
+- Cores alternadas nas linhas e filtros prontos no cabeçalho.
+- **A tabela cresce sozinha:** digitou uma linha nova embaixo, ela já faz parte da tabela, com as fórmulas.
+- **Linha de totais:** guia **Design da Tabela** > marque **Linha de Totais**.
 
-```
-=SOMA(TabVendas[Valor])
-=[@Valor]*0,1          (o @ significa "nesta linha")
-```
+> Dê um nome para a tabela em **Design da Tabela > Nome da Tabela** (ex.: `TabVendas`). Fica mais fácil de achar depois.
 
-> Renomeie a tabela em **Design da Tabela > Nome da Tabela** (ex.: `TabVendas`).
+## 8.3 Ordenar e filtrar
 
-## 8.3 Classificar e filtrar
+- **Ordenar:** clique na setinha do cabeçalho > **Classificar de A a Z** (ou do maior para o menor).
+- **Filtrar:** clique na setinha do cabeçalho e marque só o que quer ver. Ex.: só a região Sul.
+- Sem tabela? Ligue as setinhas com `Ctrl + Shift + L`.
+- **Para tirar o filtro:** clique na setinha > **Limpar Filtro**. Seus dados não somem, só ficam escondidos enquanto o filtro está ligado.
 
-- **Classificar:** Dados > Classificar (permite vários níveis: Região, depois Valor decrescente).
-- **Filtro:** `Ctrl + Shift + L`. Clique na setinha do cabeçalho para filtrar por texto, número, data ou cor.
-- **Filtros de número:** Maior que, Entre, 10 Primeiros, Acima da Média.
-- **Filtro avançado:** Dados > Avançado (critérios complexos e copiar resultado para outro local).
-- **Segmentação de dados:** em tabelas e tabelas dinâmicas, botões visuais para filtrar (Inserir > Segmentação de Dados).
+## 8.4 Ferramentas que economizam tempo
 
-## 8.4 Ferramentas de dados
-
-| Ferramenta | Onde | Para que serve |
+| Ferramenta | Onde fica | Para que serve |
 |---|---|---|
-| **Remover Duplicatas** | Dados > Remover Duplicatas | Apaga linhas repetidas |
-| **Texto para Colunas** | Dados > Texto para Colunas | Divide "Nome;Cidade" em colunas separadas |
-| **Preenchimento Relâmpago** | `Ctrl + E` | Digite 1 ou 2 exemplos e o Excel completa o padrão (ex.: extrair primeiro nome) |
-| **Localizar e Substituir** | `Ctrl + U` (pt) / `Ctrl + H` (en) | Troca textos em massa |
-| **Ir para Especial** | `F5` > Especial | Seleciona só vazias, fórmulas, constantes... |
-| **Colar Especial** | `Ctrl + Alt + V` | Cola só valores, formatos, transpõe, soma |
-| **Atingir Meta** | Dados > Teste de Hipóteses | Descobre o valor de entrada para chegar a um resultado |
-| **Consolidar** | Dados > Consolidar | Junta dados de várias abas |
-| **Subtotal** | Dados > Subtotal | Totais por grupo (dados classificados) |
-| **Agrupar** | Dados > Agrupar | Recolhe/expande linhas e colunas |
+| **Remover Duplicatas** | Guia Dados | Apaga linhas repetidas |
+| **Texto para Colunas** | Guia Dados | Separa "Nome;Cidade" em duas colunas |
+| **Preenchimento Relâmpago** | `Ctrl + E` | Você dá um exemplo e o Excel completa o resto |
+| **Localizar e Substituir** | `Ctrl + U` | Troca uma palavra por outra na planilha toda |
+| **Colar Especial** | `Ctrl + Alt + V` | Cola só os valores (sem fórmula) ou só a formatação |
 
-> **Truque: preencher células vazias com o valor de cima.** Selecione a coluna > `F5` > Especial > Em branco > digite `=` e a seta para cima > `Ctrl + Enter`.
+## 8.5 Cores automáticas (Formatação Condicional)
 
-## 8.5 Formatação condicional
+Pinta as células sozinho conforme o valor. Ex.: vendas acima de R$ 1.000 em verde.
 
-Página Inicial > **Formatação Condicional**. Destaca células automaticamente.
+1. Selecione as células (ex.: a coluna de valores).
+2. Guia **Página Inicial** > **Formatação Condicional** > **Realçar Regras das Células** > **É Maior do que...**
+3. Digite `1000` e escolha a cor. **OK**.
 
-| Tipo | Exemplo de uso |
+Outras opções prontas no mesmo menu:
+
+| Opção | O que faz |
 |---|---|
-| Realçar regras das células | Valores maiores que 1000 em verde |
-| Regras de primeiros/últimos | Os 10 maiores, abaixo da média |
-| Barras de dados | Barras dentro da célula, proporcionais ao valor |
-| Escalas de cor | Mapa de calor (vermelho a verde) |
-| Conjuntos de ícones | Setas, semáforos |
-| Valores duplicados | Destacar CPFs repetidos |
-| **Usar fórmula** | Pintar a linha inteira com base em uma coluna |
+| Valores Duplicados | Pinta o que está repetido (ótimo para achar CPF duplicado) |
+| Regras de Primeiros/Últimos | Pinta os 10 maiores, ou os que estão abaixo da média |
+| Barras de Dados | Coloca uma barrinha dentro da célula, do tamanho do valor |
+| Escalas de Cor | Vai do vermelho (menor) ao verde (maior) |
 
-### Pintar a linha inteira quando o status for "Atrasado"
+Para apagar: **Formatação Condicional** > **Limpar Regras**.
 
-1. Selecione `A2:F100`.
-2. Formatação Condicional > Nova Regra > **Usar uma fórmula**.
-3. Fórmula: `=$F2="Atrasado"` (coluna fixa com `$`, linha livre).
-4. Escolha o formato (preenchimento vermelho claro).
+## 8.6 Lista de opções (Validação de Dados)
 
-Outras fórmulas úteis:
+Cria uma setinha na célula para a pessoa **escolher** em vez de digitar. Evita erros como "sul", "Sul" e "SUL" misturados.
 
-```
-=$D2<HOJE()                     (data vencida)
-=E2>MÉDIA($E$2:$E$100)          (acima da média)
-=MOD(LIN();2)=0                 (linhas zebradas)
-=CONT.SE($A$2:$A$100;$A2)>1     (duplicados)
-```
-
-Gerencie em Formatação Condicional > **Gerenciar Regras**.
-
-## 8.6 Validação de dados
-
-Dados > **Validação de Dados**. Controla o que pode ser digitado.
-
-| Permitir | Exemplo |
-|---|---|
-| Lista | Lista suspensa: `Sul;Norte;Sudeste` ou um intervalo `=$H$2:$H$10` |
-| Número inteiro | Quantidade entre 1 e 100 |
-| Decimal | Valor maior que 0 |
-| Data | Datas a partir de hoje: `>= =HOJE()` |
-| Comprimento do texto | CPF com exatamente 11 caracteres |
-| Personalizado | `=CONT.SE($A:$A;A2)=1` (impede duplicados) |
-
-Use as abas **Mensagem de Entrada** (dica ao selecionar) e **Alerta de Erro** (mensagem ao digitar errado).
-
-> **Lista dependente:** a lista de "Cidade" muda conforme o "Estado". Crie nomes para cada lista (ex.: intervalo `SP` com as cidades de SP) e use `=INDIRETO(A2)` na validação da coluna Cidade.
+1. Selecione as células.
+2. Guia **Dados** > **Validação de Dados**.
+3. Em **Permitir**, escolha **Lista**.
+4. Em **Fonte**, digite as opções separadas por ponto e vírgula: `Sul;Norte;Sudeste;Nordeste;Centro-Oeste`
+5. **OK**.
 
 ## 8.7 Gráficos
 
-Selecione os dados > Inserir > Gráficos (ou `Alt + F1` para gráfico rápido).
+Selecione os dados (com o cabeçalho) > guia **Inserir** > escolha o gráfico. Ou aperte `Alt + F1` para um gráfico rápido.
 
-| Gráfico | Quando usar |
+| Gráfico | Use para |
 |---|---|
-| Colunas / Barras | Comparar categorias (vendas por vendedor) |
-| Linhas | Evolução no tempo (vendas por mês) |
-| Pizza / Rosca | Partes de um todo (poucas categorias, até 5) |
-| Dispersão | Relação entre duas variáveis |
-| Combinado | Duas medidas com escalas diferentes (valor e %) |
-| Cascata | Entradas e saídas (fluxo de caixa) |
-| Mapa | Valores por estado/país |
-| Minigráficos (Sparklines) | Mini gráfico dentro da célula (Inserir > Minigráficos) |
+| Colunas ou Barras | Comparar coisas (vendas de cada vendedor) |
+| Linhas | Ver a evolução ao longo do tempo (vendas mês a mês) |
+| Pizza | Mostrar partes de um total (use com poucas fatias, até 5) |
 
-Boas práticas: título claro, rótulos de dados, remover enfeites desnecessários (3D, sombras) e ordenar as barras do maior para o menor.
+> **Gráfico bom é simples:** coloque um título claro, mostre os valores em cima das barras e evite efeitos 3D.
 
-## 8.8 Tabela Dinâmica (o recurso mais valorizado do mercado)
+## 8.8 Tabela Dinâmica: o resumo automático
 
-Resume milhares de linhas em segundos, **sem fórmulas**.
+É **o recurso mais valorizado** em vagas de escritório. Ela transforma milhares de linhas em um resumo, **sem você escrever nenhuma fórmula**. Exemplo: o total vendido por cada vendedor em cada região.
 
 1. Clique em qualquer célula dos dados.
-2. **Inserir > Tabela Dinâmica** > Nova Planilha > OK.
-3. Arraste os campos para as áreas:
+2. Guia **Inserir** > **Tabela Dinâmica** > **OK**.
+3. À direita aparece a lista com os nomes das colunas. **Arraste** cada um para uma caixinha:
 
-| Área | Função | Exemplo |
+| Caixinha | O que colocar | Exemplo |
 |---|---|---|
-| **Linhas** | Categorias na vertical | Vendedor |
-| **Colunas** | Categorias na horizontal | Região |
-| **Valores** | O que calcular | Soma de Valor |
-| **Filtros** | Filtro geral do relatório | Ano |
+| **Linhas** | O que vai aparecer de cima para baixo | Vendedor |
+| **Colunas** | O que vai aparecer da esquerda para a direita | Região |
+| **Valores** | O número que você quer somar | Valor |
+| **Filtros** | Um filtro para o resumo todo | Ano |
 
-Recursos importantes:
+Pronto: o Excel monta a tabela de resumo.
 
-- **Configurações do Campo de Valor:** trocar Soma por Contagem, Média, Máximo, ou **Mostrar Valores Como** % do total.
-- **Agrupar datas:** botão direito em uma data > Agrupar > Meses, Trimestres, Anos.
-- **Atualizar:** quando os dados mudam, botão direito > Atualizar (ou `Alt + F5`). Use dados em formato de Tabela para incluir novas linhas automaticamente.
-- **Segmentação de Dados e Linha do Tempo:** filtros visuais clicáveis.
-- **Gráfico Dinâmico:** Analisar Tabela Dinâmica > Gráfico Dinâmico.
-- **Duplo clique** em um valor mostra as linhas que o compõem.
-- **Campo calculado:** Analisar > Campos, Itens e Conjuntos.
+**Coisas importantes:**
 
-> **Dashboard em 10 minutos:** crie 3 tabelas dinâmicas + 3 gráficos dinâmicos em uma aba, adicione uma Segmentação de Dados e conecte-a a todas (botão direito > Conexões de Relatório).
+- **Mudou os dados?** Clique com o botão direito na tabela dinâmica > **Atualizar**. Ela não se atualiza sozinha!
+- **Quer contar em vez de somar?** Clique na setinha do campo em Valores > **Configurações do Campo de Valor** > **Contagem**.
+- **Juntar datas por mês:** botão direito em uma data da tabela dinâmica > **Agrupar** > **Meses**.
+- **Dois cliques** em um número mostram as linhas que formaram aquele total.
+- **Botões de filtro bonitos:** guia **Análise de Tabela Dinâmica** > **Inserir Segmentação de Dados**.
 
-## 8.9 Power Query (limpeza e automação de dados)
+## 8.9 Proteger e compartilhar
 
-**Dados > Obter Dados**. Importa e trata dados de Excel, CSV, pastas, bancos de dados e web, gravando cada passo para repetir automaticamente.
-
-O que dá para fazer sem fórmulas:
-
-- Remover colunas, linhas em branco e duplicadas.
-- Dividir colunas, trocar tipos (texto, número, data), substituir valores.
-- **Combinar todos os arquivos de uma pasta** (ex.: 12 planilhas mensais em uma só).
-- **Mesclar consultas** (como um PROCV entre tabelas).
-- **Transformar colunas em linhas** (Despivotar).
-
-Depois de configurar, basta clicar em **Atualizar Tudo** quando chegarem novos dados.
-
-## 8.10 Proteção e colaboração
-
-- **Proteger planilha:** Revisão > Proteger Planilha (antes, desbloqueie as células editáveis: `Ctrl + 1` > Proteção > desmarcar Bloqueada).
-- **Proteger pasta de trabalho:** impede inserir/excluir abas.
-- **Senha para abrir:** Arquivo > Informações > Proteger Pasta de Trabalho > Criptografar com Senha.
-- **Comentários e anotações:** botão direito > Novo Comentário (`Ctrl + Shift + F2` para anotação).
-- **Coautoria:** salve no OneDrive/SharePoint e compartilhe; várias pessoas editam ao mesmo tempo.
-- **Histórico de versões:** Arquivo > Informações > Histórico de Versões.
-
-## 8.11 Nomes, LET e LAMBDA
-
-- **Gerenciador de Nomes:** `Ctrl + F3`.
-- `LET` deixa fórmulas longas legíveis:
-
-```
-=LET(vendas;SOMA(E2:E6); meta;10000; SE(vendas>=meta;"Bateu";"Faltam "&meta-vendas))
-```
-
-- `LAMBDA` cria funções próprias. Em Fórmulas > Definir Nome, crie `COMISSAO` com:
-
-```
-=LAMBDA(valor; SE(valor>=3000; valor*5%; valor*2%))
-```
-
-Depois use em qualquer célula: `=COMISSAO(E2)`.
-
-## 8.12 Macros e VBA (introdução)
-
-Macros automatizam tarefas repetitivas.
-
-1. Habilite a guia **Desenvolvedor**: Arquivo > Opções > Personalizar Faixa de Opções > marque Desenvolvedor.
-2. **Gravar Macro:** Desenvolvedor > Gravar Macro, faça as ações, Parar Gravação.
-3. Veja o código: `Alt + F11` (editor VBA).
-4. Salve como **.xlsm** (pasta habilitada para macro).
-
-Exemplo de macro que formata o cabeçalho:
-
-```
-Sub FormatarCabecalho()
-    With Range("A1").CurrentRegion.Rows(1)
-        .Font.Bold = True
-        .Interior.Color = RGB(31, 78, 121)
-        .Font.Color = RGB(255, 255, 255)
-    End With
-    Columns.AutoFit
-End Sub
-```
-
-> **Segurança:** só habilite macros de arquivos de origem confiável. Macros em anexos de e-mail são uma forma comum de vírus.
-
-> **Alternativa moderna:** o **Office Scripts** (guia Automatizar, Excel para web) usa TypeScript e funciona na nuvem.
+- **Impedir que mexam na planilha:** guia **Revisão** > **Proteger Planilha**.
+- **Colocar senha para abrir o arquivo:** Arquivo > Informações > Proteger Pasta de Trabalho > **Criptografar com Senha**. Não esqueça a senha: não tem como recuperar!
+- **Comentário em uma célula:** botão direito > **Novo Comentário**.
+- **Trabalhar junto com outras pessoas:** salve o arquivo no OneDrive e clique em **Compartilhar**.
 
 ## Resumo do módulo
 
-- Organize os dados em formato de banco de dados e transforme em **Tabela**.
-- Formatação condicional com fórmula usa `$` na coluna: `=$F2="Atrasado"`.
-- Validação cria listas suspensas e impede erros de digitação.
-- **Tabela Dinâmica** resume dados sem fórmulas; Power Query automatiza a limpeza.
+- Dados organizados: cabeçalho na 1ª linha, sem linhas em branco.
+- `Ctrl + Alt + T` transforma em Tabela.
+- Formatação Condicional pinta sozinha; Validação cria lista de opções.
+- **Tabela Dinâmica** resume tudo sem fórmulas. Lembre de **Atualizar**.

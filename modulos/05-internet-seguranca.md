@@ -1,70 +1,68 @@
 # 5. Internet, E-mail e Segurança
 
-> **Objetivo:** usar a internet e o e-mail de forma profissional e se proteger contra golpes e vírus.
+> **Objetivo:** usar a internet e o e-mail do jeito certo no trabalho e não cair em golpes.
 
-## 5.1 Navegadores e pesquisa
+## 5.1 Navegando com segurança
 
-- Navegadores: **Google Chrome**, **Microsoft Edge**, **Mozilla Firefox**.
-- Sempre confira o endereço do site e o **cadeado** (HTTPS) antes de digitar senhas.
+- Os navegadores mais usados são o **Google Chrome** e o **Microsoft Edge**.
+- Antes de digitar uma senha, olhe a barra de endereço: confira se o **nome do site está certo** e se aparece o **cadeado** 🔒 ao lado.
 
-### Truques de pesquisa no Google
+### Pesquisando melhor no Google
 
-| Operador | Exemplo | Resultado |
+| Truque | Exemplo | O que faz |
 |---|---|---|
-| `"aspas"` | `"tabela dinâmica"` | Busca a frase exata |
-| `-` | `excel -vba` | Exclui uma palavra |
-| `site:` | `procv site:support.microsoft.com` | Busca só naquele site |
-| `filetype:` | `apostila excel filetype:pdf` | Busca um tipo de arquivo |
-| `OR` | `procv OR procx` | Um ou outro termo |
-| `*` | `como * no excel` | Coringa para palavras |
+| Aspas | `"tabela dinâmica"` | Procura exatamente essa frase |
+| Sinal de menos | `excel -curso` | Tira resultados com essa palavra |
+| `filetype:pdf` | `apostila excel filetype:pdf` | Mostra só arquivos PDF |
 
-## 5.2 E-mail profissional
+## 5.2 E-mail no trabalho
 
-- **Para:** destinatário principal. **Cc:** cópia (ficam sabendo). **Cco:** cópia oculta (ninguém vê quem recebeu).
-- Use um **assunto claro**: "Relatório de vendas - Setembro/2026".
-- Estrutura: saudação, mensagem objetiva, despedida e assinatura.
-- Antes de enviar: confira anexos, destinatários e ortografia.
-- Arquivos grandes: envie um link do OneDrive/Google Drive em vez de anexar.
+- **Para:** quem precisa ler e responder.
+- **Cc (com cópia):** quem só precisa ficar sabendo.
+- **Cco (cópia oculta):** a pessoa recebe, mas os outros não veem que ela recebeu.
+- Escreva um **assunto claro**: "Relatório de vendas - setembro".
+- Mensagem: cumprimento, recado curto e direto, despedida e seu nome.
+- **Antes de enviar:** confira se o anexo está lá, se mandou para as pessoas certas e se não tem erro de português.
 
-## 5.3 Senhas seguras
+## 5.3 Senhas fortes
 
-- Mínimo de **12 caracteres**, misturando letras, números e símbolos. Frases funcionam bem: `Cafe-Com-Pao-Na-Padaria-42!`
-- **Nunca** repita a mesma senha em sites diferentes.
-- Use um **gerenciador de senhas** (Bitwarden, o do Google ou do Microsoft Edge).
-- Ative a **verificação em duas etapas (2FA)** no e-mail, WhatsApp, banco e redes sociais.
+- Use senhas **longas**, de pelo menos 12 caracteres. Uma frase é fácil de lembrar e difícil de adivinhar: `Cafe-Com-Pao-Na-Padaria-42!`
+- **Nunca** use a mesma senha em sites diferentes. Se vazar em um, invadem todos.
+- Deixe o navegador ou um aplicativo de senhas guardar elas para você.
+- Ative a **verificação em duas etapas**: além da senha, o site pede um código que chega no seu celular. Mesmo que roubem sua senha, não conseguem entrar. Ative no e-mail, no WhatsApp e no banco.
 
 ## 5.4 Golpes mais comuns
 
-| Golpe | Como funciona | Como se proteger |
+| Golpe | Como acontece | Como se proteger |
 |---|---|---|
-| **Phishing** | E-mail/SMS falso imitando banco, loja ou empresa, com link para roubar senha | Não clique em links; acesse o site digitando o endereço |
-| **Falso suporte** | Alguém liga dizendo ser do banco/T.I. pedindo para instalar programa de acesso remoto | Desligue e ligue para o número oficial |
-| **Boleto falso** | Boleto adulterado com outro beneficiário | Confira o nome do beneficiário antes de pagar |
-| **Clonagem de WhatsApp** | Pedem o código de 6 dígitos recebido por SMS | Nunca compartilhe códigos; ative a confirmação em duas etapas |
-| **Ransomware** | Vírus que sequestra (criptografa) seus arquivos | Backup frequente e não abrir anexos suspeitos |
+| **Mensagem falsa** | E-mail ou SMS fingindo ser do banco ou de uma loja, com um link para roubar sua senha | Não clique. Abra o site ou app do banco você mesmo |
+| **Falso suporte** | Alguém liga dizendo ser do banco ou da T.I. e pede para você instalar um programa | Desligue e ligue você para o número oficial |
+| **Boleto falso** | Boleto alterado para o dinheiro ir para outra pessoa | Antes de pagar, confira o nome de quem vai receber |
+| **WhatsApp clonado** | Pedem o código de 6 números que chegou por SMS | **Nunca** passe esse código para ninguém |
+| **Vírus que sequestra arquivos** | Um anexo bloqueia todos os seus arquivos e pedem dinheiro para liberar | Não abra anexos estranhos e tenha backup |
 
-### Sinais de e-mail falso
+### Como desconfiar de um e-mail
 
-- Urgência exagerada ("sua conta será bloqueada hoje!").
-- Remetente com domínio estranho (`suporte@banco-seguranca123.com`).
-- Erros de português e saudação genérica ("Prezado cliente").
-- Anexos `.exe`, `.zip`, `.scr` ou planilhas pedindo para "Habilitar macros".
+- Pressa demais: "Sua conta será bloqueada **hoje**!"
+- Endereço de quem enviou esquisito: `suporte@banco-seguranca123.com`
+- Erros de português e "Prezado cliente" em vez do seu nome.
+- Anexos que você não esperava, ou planilhas pedindo para "Habilitar conteúdo".
 
-> **Regra de ouro:** passe o mouse sobre o link (sem clicar) para ver o endereço real. Na dúvida, não clique.
+> **Regra de ouro:** passe o mouse em cima do link **sem clicar** e veja, no canto de baixo da tela, para onde ele leva de verdade. Na dúvida, não clique.
 
 ## 5.5 Boas práticas no trabalho
 
-- Bloqueie o computador ao sair da mesa: `Win + L`.
-- Mantenha Windows, navegador e antivírus (Windows Defender) atualizados.
-- Não use pendrives desconhecidos.
-- Não instale programas piratas (são a principal porta de entrada de vírus).
-- Faça **backup 3-2-1**: 3 cópias, em 2 mídias diferentes, 1 fora do local (nuvem).
-- Em Wi-Fi público, evite acessar banco e sistemas da empresa.
-- Respeite a **LGPD** (Lei Geral de Proteção de Dados): não compartilhe dados pessoais de clientes (CPF, telefone, endereço) sem necessidade, nem cole esses dados em ferramentas de IA.
+- Saiu da mesa? `Win + L` para bloquear o computador.
+- Deixe o Windows e o navegador sempre atualizados.
+- Não coloque no computador pendrives que você achou ou não conhece.
+- Não instale programas piratas: é a porta de entrada nº 1 de vírus.
+- Faça **backup**: tenha seus arquivos importantes em mais de um lugar (computador + nuvem, por exemplo).
+- Em Wi-Fi público (shopping, aeroporto), evite entrar no banco ou nos sistemas da empresa.
+- **Dados de clientes são sigilosos.** Pela lei (LGPD), você não pode passar CPF, telefone ou endereço de clientes para quem não precisa, nem colar esses dados em sites ou no ChatGPT.
 
 ## Resumo do módulo
 
-- Confira HTTPS e o endereço do site.
-- Senhas longas, únicas e com 2FA.
-- Desconfie de urgência, links e anexos.
-- Backup é a melhor defesa contra perda de dados.
+- Confira o nome do site e o cadeado antes de digitar senha.
+- Senhas longas, diferentes para cada site, e verificação em duas etapas.
+- Desconfie de pressa, links e anexos.
+- Backup: seus arquivos em mais de um lugar.

@@ -1,208 +1,134 @@
 # 6. Excel: Primeiros Passos
 
-> **Objetivo:** entender a interface do Excel, digitar e formatar dados, criar as primeiras fórmulas e dominar os atalhos.
+> **Objetivo:** entender a tela do Excel, digitar e arrumar dados e fazer suas primeiras contas.
 
-## 6.1 Conceitos básicos
+## 6.1 Conhecendo a planilha
 
-| Termo | O que é |
+O Excel é uma grande **tabela** onde você guarda informações e faz contas automáticas.
+
+| Nome | O que é |
 |---|---|
-| **Pasta de trabalho** | O arquivo do Excel (.xlsx) |
-| **Planilha (aba)** | Cada folha dentro do arquivo (Planilha1, Planilha2...) |
-| **Coluna** | Identificada por letras (A, B, C ... XFD) |
-| **Linha** | Identificada por números (1, 2, 3 ... 1.048.576) |
-| **Célula** | Encontro de coluna e linha. Ex.: `B3` |
-| **Intervalo** | Grupo de células. Ex.: `A1:C10` |
-| **Caixa de Nome** | Mostra o endereço da célula selecionada (à esquerda da barra de fórmulas) |
-| **Barra de fórmulas** | Mostra/edita o conteúdo da célula |
-| **Faixa de Opções** | Menu superior com as guias Página Inicial, Inserir, Fórmulas, Dados... |
+| **Coluna** | As "filas em pé", identificadas por **letras**: A, B, C... |
+| **Linha** | As "filas deitadas", identificadas por **números**: 1, 2, 3... |
+| **Célula** | Cada quadradinho. O nome dela junta a letra da coluna e o número da linha. Ex.: `B3` é a coluna B, linha 3 |
+| **Intervalo** | Um grupo de células. `A1:A10` quer dizer "de A1 até A10" |
+| **Aba** | As "folhas" lá embaixo (Planilha1, Planilha2). Um arquivo pode ter várias |
+| **Barra de fórmulas** | A barra comprida em cima das colunas. Mostra o que está escrito dentro da célula |
 
-## 6.2 Tipos de dados
+## 6.2 Digitando dados
 
-- **Texto:** alinha à esquerda. Ex.: `Nome`, `Rua A`.
-- **Número:** alinha à direita. Ex.: `150`, `3,14`.
-- **Data/Hora:** são números por baixo (1 = 01/01/1900). Ex.: `03/10/2026`.
-- **Fórmula:** sempre começa com `=`. Ex.: `=A1+B1`.
+- Clique na célula, digite e aperte `Enter` (desce) ou `Tab` (vai para a direita).
+- Para corrigir, clique na célula e aperte `F2`.
+- **Texto** fica encostado à esquerda; **números** ficam à direita. Se um número ficou à esquerda, o Excel achou que é texto e não vai conseguir fazer conta com ele.
 
-> **Dica:** para digitar um número como texto (ex.: CEP com zero à esquerda), comece com apóstrofo: `'01234`.
+> **Dica:** para digitar algo que começa com zero (como um CEP), coloque um apóstrofo antes: `'01234-000`.
 
-## 6.3 Operadores
+## 6.3 Fazendo contas
 
-| Operador | Função | Exemplo |
+Toda conta no Excel **começa com o sinal de igual** `=`.
+
+| Sinal | Conta | Exemplo |
 |---|---|---|
-| `+` | Soma | `=A1+B1` |
-| `-` | Subtração | `=A1-B1` |
-| `*` | Multiplicação | `=A1*2` |
-| `/` | Divisão | `=A1/4` |
-| `^` | Potência | `=2^3` (resultado 8) |
-| `%` | Porcentagem | `=A1*10%` |
-| `&` | Junta textos | `=A1&" "&B1` |
-| `=` `>` `<` `>=` `<=` `<>` | Comparação | `=A1>100` (VERDADEIRO/FALSO) |
+| `+` | Somar | `=A1+B1` |
+| `-` | Subtrair | `=A1-B1` |
+| `*` | Multiplicar | `=A1*2` |
+| `/` | Dividir | `=A1/4` |
+| `%` | Porcentagem | `=A1*10%` (10% de A1) |
 
-O Excel respeita a ordem matemática: parênteses, potência, multiplicação/divisão, soma/subtração. `=2+3*4` dá 14; `=(2+3)*4` dá 20.
+> **Por que usar o nome da célula e não o número?** Se você escreve `=A1+B1` e depois muda o valor de A1, o resultado se atualiza sozinho. Essa é a mágica do Excel.
 
-> **Separador de argumentos:** no Excel em português usa-se **ponto e vírgula** `;` . Ex.: `=SOMA(A1;B1)`. Nas versões em inglês usa-se vírgula: `=SUM(A1,B1)`.
+Como na matemática da escola, a multiplicação vem antes da soma: `=2+3*4` dá 14. Use parênteses para mudar a ordem: `=(2+3)*4` dá 20.
 
-## 6.4 Referências: relativa, absoluta e mista
+## 6.4 Sua primeira função: SOMA
 
-Quando você **arrasta** uma fórmula, as referências mudam automaticamente.
+Uma **função** é uma conta pronta. A mais usada é a `SOMA`:
 
-| Tipo | Escrita | Ao arrastar |
-|---|---|---|
-| Relativa | `A1` | Muda linha e coluna |
-| Absoluta | `$A$1` | Não muda nunca |
-| Mista (coluna fixa) | `$A1` | Só a linha muda |
-| Mista (linha fixa) | `A$1` | Só a coluna muda |
+```
+=SOMA(A1:A10)
+```
 
-**Pressione F4** enquanto edita a referência para alternar entre os tipos.
+Lê-se: "some de A1 até A10".
 
-Exemplo: preço em `B2:B10` e a taxa de imposto em `E1`:
+> **Atalho:** clique na célula embaixo dos números e aperte `Alt + =`. O Excel monta a SOMA sozinho.
+
+No Excel em português, quando a função recebe mais de uma informação, elas são separadas por **ponto e vírgula** `;`. Ex.: `=SOMA(A1;C1)` soma só A1 e C1.
+
+## 6.5 Copiar uma conta para as outras linhas
+
+Fez a conta na primeira linha? Não precisa digitar de novo nas outras:
+
+1. Clique na célula com a conta.
+2. Repare no **quadradinho** no canto de baixo à direita da célula.
+3. **Clique duas vezes** nele. A conta é copiada para todas as linhas de baixo.
+
+O Excel ajusta a conta sozinho: `=B2*C2` vira `=B3*C3` na linha de baixo, `=B4*C4` na outra, e assim por diante.
+
+> **Truque do preenchimento:** digite `Jan` e arraste o quadradinho para baixo: o Excel completa Fev, Mar, Abr... Funciona com dias da semana e números também.
+
+## 6.6 O cifrão `$`: travar uma célula
+
+Às vezes você **não quer** que a célula mude quando copia a conta. Exemplo: todos os preços precisam ser multiplicados pela mesma taxa, que está em `E1`.
 
 ```
 =B2*$E$1
 ```
 
-Arraste para baixo: `B2` vira `B3, B4...`, mas `$E$1` continua fixo.
+O `$` "tranca" a célula. Ao copiar para baixo, `B2` vira `B3`, `B4`... mas `$E$1` continua sempre E1.
 
-Referência a outra aba: `=Vendas!B2`. A outro arquivo: `=[Orcamento.xlsx]Plan1!A1`.
+> **Atalho:** enquanto escreve a conta, clique em cima do `E1` e aperte `F4`. O Excel coloca os `$` para você.
 
-## 6.5 Preenchimento e alça de preenchimento
+## 6.7 Deixando bonito (formatação)
 
-O quadradinho no canto inferior direito da célula é a **alça de preenchimento**:
+Quase tudo fica na guia **Página Inicial**:
 
-- Arraste para copiar uma fórmula para as células vizinhas.
-- **Duplo clique** na alça preenche até o fim dos dados.
-- Digite `Jan` e arraste: Fev, Mar, Abr... (também funciona com dias da semana, datas e números).
-- Digite `1` e `2`, selecione os dois e arraste: sequência 3, 4, 5...
-
-## 6.6 Formatação
-
-| Recurso | Onde | Uso |
-|---|---|---|
-| Formato de número | Página Inicial > Número | Moeda (R$), Porcentagem, Data, Contábil |
-| Casas decimais | Página Inicial > Número | Aumentar/Diminuir casas |
-| Mesclar e centralizar | Página Inicial > Alinhamento | Títulos (use com moderação) |
-| Quebrar texto | Página Inicial > Alinhamento | Texto em várias linhas na célula |
-| Bordas | Página Inicial > Fonte | Linhas da tabela |
-| Pincel de formatação | Página Inicial > Área de transferência | Copia só o formato |
-| Estilos de célula | Página Inicial > Estilos | Formatos prontos |
-| Formatar como Tabela | Página Inicial > Estilos | Tabela com filtros e cores (veja Módulo 8) |
-| Formatar células | `Ctrl + 1` | Todas as opções de formato |
-
-### Formatos personalizados úteis (Ctrl + 1 > Personalizado)
-
-| Código | Resultado |
+| O que fazer | Onde |
 |---|---|
-| `000.000.000-00` | CPF: 123.456.789-00 |
-| `00000-000` | CEP: 01234-000 |
-| `"R$" #.##0,00` | R$ 1.250,00 |
-| `0,0%` | 12,5% |
-| `dd/mm/aaaa` | 03/10/2026 |
-| `dddd` | sexta-feira (dia da semana) |
-| `mmmm/aaaa` | outubro/2026 |
-| `[h]:mm` | Soma de horas acima de 24h (ex.: 37:30) |
+| Negrito, cor da letra, tamanho | Grupo **Fonte** |
+| Colocar bordas na tabela | Botão de **Bordas** (grupo Fonte) |
+| Mostrar como dinheiro (R$) | Grupo **Número** > Moeda |
+| Mostrar como porcentagem | Grupo **Número** > % |
+| Mais ou menos casas depois da vírgula | Grupo **Número** > botões ,00 |
+| Texto em várias linhas dentro da célula | **Quebrar Texto Automaticamente** |
+| Copiar só a aparência de uma célula | **Pincel de Formatação** |
+| Todas as opções de uma vez | `Ctrl + 1` |
 
-## 6.7 Linhas, colunas e planilhas
+## 6.8 Linhas, colunas e abas
 
-- **Inserir linha/coluna:** botão direito no cabeçalho > Inserir (ou `Ctrl + +`).
-- **Excluir:** botão direito > Excluir (ou `Ctrl + -`).
-- **Ajustar largura:** duplo clique na divisa entre as letras das colunas.
-- **Ocultar/Reexibir:** botão direito no cabeçalho.
-- **Nova planilha:** `Shift + F11` ou o botão `+` ao lado das abas.
-- **Renomear aba:** duplo clique no nome da aba.
-- **Congelar painéis:** Exibir > Congelar Painéis (mantém o cabeçalho visível ao rolar).
+- **Coluna estreita demais** (aparece `#####`)? Dê dois cliques na linha entre as letras das colunas. Ela se ajusta sozinha.
+- **Inserir ou excluir linha/coluna:** botão direito no número da linha (ou na letra da coluna) > Inserir ou Excluir.
+- **Nova aba:** clique no `+` ao lado das abas.
+- **Mudar o nome da aba:** dois cliques no nome.
+- **Deixar o cabeçalho sempre visível ao rolar:** guia **Exibir** > **Congelar Painéis** > Congelar Linha Superior.
 
-## 6.8 Atalhos essenciais do Excel
+## 6.9 Atalhos do Excel (em português)
 
-> Os atalhos com `Ctrl + letra` variam entre o Excel em **português** e em **inglês**. A tabela mostra as duas versões quando são diferentes.
-
-### Navegação e seleção
-
-| Atalho | Função |
+| Atalho | O que faz |
 |---|---|
-| `Ctrl + Seta` | Vai até o fim dos dados naquela direção |
-| `Ctrl + Shift + Seta` | Seleciona até o fim dos dados |
-| `Ctrl + Home` | Vai para A1 |
-| `Ctrl + End` | Vai para a última célula usada |
-| `Ctrl + Page Down/Up` | Próxima / anterior aba |
-| `Ctrl + Espaço` | Seleciona a coluna inteira |
-| `Shift + Espaço` | Seleciona a linha inteira |
-| `Ctrl + T` (pt) / `Ctrl + A` (en) | Seleciona tudo |
-| `F5` ou `Ctrl + G` | Ir para (célula ou Ir para Especial) |
-| `Ctrl + Backspace` | Volta a tela para a célula ativa |
-
-### Edição
-
-| Atalho | Função |
-|---|---|
+| `Ctrl + B` | Salvar |
+| `Ctrl + N` | Negrito |
+| `Ctrl + Z` | Desfazer |
+| `Ctrl + C` / `Ctrl + V` | Copiar / colar |
+| `Alt + =` | Somar automaticamente |
+| `Ctrl + 1` | Formatar células |
 | `F2` | Editar a célula |
-| `Enter` / `Tab` | Confirma e desce / vai para a direita |
-| `Esc` | Cancela a edição |
-| `Alt + Enter` | Quebra de linha dentro da célula |
-| `Ctrl + Enter` | Preenche todas as células selecionadas com o mesmo valor |
-| `Ctrl + D` | Copia a célula de cima (preencher para baixo) |
-| `Ctrl + R` | Copia a célula da esquerda (preencher para a direita) |
-| `Ctrl + ;` | Insere a data de hoje |
-| `Ctrl + Shift + ;` | Insere a hora atual |
-| `Ctrl + E` | Preenchimento Relâmpago |
-| `Ctrl + +` / `Ctrl + -` | Inserir / excluir linhas ou colunas |
-| `Ctrl + Z` / `Ctrl + Y` | Desfazer / refazer |
-| `Ctrl + Alt + V` | Colar especial (valores, formatos, transpor) |
-| `Delete` | Apaga o conteúdo |
+| `F4` | Colocar o `$` (travar a célula) |
+| `Ctrl + ;` | Escrever a data de hoje |
+| `Ctrl + setas` | Pular até o fim dos dados |
+| `Ctrl + Shift + L` | Ligar/desligar os filtros |
+| `Alt + Enter` | Pular linha dentro da mesma célula |
 
-### Fórmulas
+> **Excel em inglês:** salvar é `Ctrl + S` e negrito é `Ctrl + B`.
 
-| Atalho | Função |
-|---|---|
-| `Alt + =` | AutoSoma |
-| `F4` | Alterna referência relativa/absoluta (e repete a última ação) |
-| `Shift + F3` | Inserir função |
-| `F9` | Recalcula (ou avalia parte da fórmula selecionada) |
-| `Ctrl + '` (crase/acento) | Mostra as fórmulas em vez dos resultados |
-| `Ctrl + Shift + Enter` | Fórmula matricial (versões antigas) |
-| `Ctrl + Shift + U` | Expande a barra de fórmulas |
+## 6.10 Salvar e imprimir
 
-### Formatação
-
-| Atalho (pt-BR) | Atalho (inglês) | Função |
-|---|---|---|
-| `Ctrl + N` | `Ctrl + B` | Negrito |
-| `Ctrl + I` | `Ctrl + I` | Itálico |
-| `Ctrl + S` | `Ctrl + U` | Sublinhado |
-| `Ctrl + 1` | `Ctrl + 1` | Formatar células |
-| `Ctrl + Shift + $` | `Ctrl + Shift + $` | Formato moeda |
-| `Ctrl + Shift + %` | `Ctrl + Shift + %` | Formato porcentagem |
-| `Ctrl + Shift + #` | `Ctrl + Shift + #` | Formato data |
-| `Ctrl + Shift + !` | `Ctrl + Shift + !` | Número com 2 casas e milhar |
-
-### Arquivo e dados
-
-| Atalho (pt-BR) | Atalho (inglês) | Função |
-|---|---|---|
-| `Ctrl + B` | `Ctrl + S` | Salvar |
-| `F12` | `F12` | Salvar como |
-| `Ctrl + O` | `Ctrl + N` | Nova pasta de trabalho |
-| `Ctrl + A` | `Ctrl + O` | Abrir |
-| `Ctrl + L` | `Ctrl + F` | Localizar |
-| `Ctrl + U` | `Ctrl + H` | Substituir |
-| `Ctrl + Alt + T` | `Ctrl + T` | Criar Tabela (com dados selecionados) |
-| `Ctrl + Shift + L` | `Ctrl + Shift + L` | Ligar/desligar filtros |
-| `Alt + F1` | `Alt + F1` | Gráfico instantâneo |
-| `F11` | `F11` | Gráfico em nova aba |
-| `F7` | `F7` | Verificar ortografia |
-| `Alt` | `Alt` | Mostra as letras de atalho da faixa de opções |
-
-> **Truque universal:** pressione `Alt` e siga as letras que aparecem na faixa de opções. Você não precisa decorar: o Excel mostra as letras na tela, e depois de alguns dias elas viram memória muscular.
-
-## 6.9 Salvar e imprimir
-
-- Formatos: `.xlsx` (padrão), `.xlsm` (com macros), `.csv` (texto separado por `;`), `.pdf`.
-- **Exportar para PDF:** Arquivo > Salvar como > tipo PDF.
-- **Imprimir bem:** Layout da Página > Orientação (Paisagem), **Dimensionar para Ajustar** (1 página de largura), **Imprimir Títulos** (repete o cabeçalho em todas as páginas), **Área de Impressão**.
-- Use `Ctrl + P` para visualizar antes de imprimir.
+- `Ctrl + B` salva. O arquivo do Excel tem a extensão **.xlsx**.
+- **Transformar em PDF:** Arquivo > Salvar como > escolha o tipo **PDF**.
+- **Antes de imprimir**, aperte `Ctrl + P` para ver como vai ficar. Se a tabela não couber, em **Configurações** escolha **Ajustar todas as colunas em uma página** e a orientação **Paisagem** (folha deitada).
 
 ## Resumo do módulo
 
-- Fórmulas começam com `=`; no Excel em português o separador é `;`.
-- `$` fixa referências (tecla F4).
-- Duplo clique na alça de preenchimento copia a fórmula até o fim.
-- `Ctrl + 1` formata, `Alt + =` soma, `Ctrl + Seta` navega.
+- Toda conta começa com `=`.
+- Use o nome das células (`=A1+B1`) para o resultado se atualizar sozinho.
+- Dois cliques no quadradinho copiam a conta para baixo.
+- `$` trava a célula (atalho `F4`).
+- `Alt + =` soma; `Ctrl + B` salva.

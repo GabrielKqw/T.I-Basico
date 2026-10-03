@@ -1,26 +1,25 @@
 # Downloads
 
-Todos os materiais do curso para baixar, estudar offline e imprimir.
+Materiais para baixar, imprimir e estudar sem internet.
 
-## Apostila completa
+## Colinhas (resumos de 1 página)
 
-**[Baixar Apostila Completa (PDF)](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/Apostila-Completa-TI-Basico.pdf)** - todos os 11 módulos em um único arquivo.
+Cada colinha resume um módulo em **uma folha**. Imprima e deixe ao lado do computador.
 
-## PDFs por módulo
+**[Baixar todas as colinhas (PDF)](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/Colinhas-TI-Basico.pdf)**: as 10 colinhas em um arquivo só.
 
 | Módulo | Download |
 |---|---|
-| 1. Fundamentos de Informática | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/01-fundamentos.pdf) |
-| 2. Windows e Atalhos de Teclado | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/02-windows-atalhos.pdf) |
-| 3. Comandos do Prompt (CMD) | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/03-comandos-cmd.pdf) |
-| 4. PowerShell e Terminal Linux | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/04-powershell-linux.pdf) |
-| 5. Internet, E-mail e Segurança | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/05-internet-seguranca.pdf) |
-| 6. Excel: Primeiros Passos | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/06-excel-basico.pdf) |
-| 7. Excel: Fórmulas e Funções | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/07-excel-funcoes.pdf) |
-| 8. Excel: Recursos Avançados | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/08-excel-avancado.pdf) |
-| 9. Google Planilhas | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/09-google-planilhas.pdf) |
-| 10. ChatGPT para Excel | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/10-chatgpt-excel.pdf) |
-| 11. Exercícios e Gabarito | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/11-exercicios.pdf) |
+| 1. Fundamentos de Informática | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-01-fundamentos.pdf) |
+| 2. Windows e Atalhos de Teclado | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-02-windows-atalhos.pdf) |
+| 3. Comandos do Prompt (CMD) | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-03-comandos-cmd.pdf) |
+| 4. PowerShell | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-04-powershell.pdf) |
+| 5. Internet, E-mail e Segurança | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-05-internet-seguranca.pdf) |
+| 6. Excel: Primeiros Passos | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-06-excel-basico.pdf) |
+| 7. Excel: Fórmulas e Funções | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-07-excel-funcoes.pdf) |
+| 8. Excel: Recursos Avançados | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-08-excel-avancado.pdf) |
+| 9. Google Planilhas | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-09-google-planilhas.pdf) |
+| 10. ChatGPT para Excel | [PDF](https://github.com/GabrielKqw/T.I-Basico/raw/main/pdfs/colinha-10-chatgpt-excel.pdf) |
 
 ## Planilha de exercícios
 

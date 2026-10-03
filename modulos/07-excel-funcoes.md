@@ -1,18 +1,18 @@
 # 7. Excel: Fórmulas e Funções
 
-> **Objetivo:** conhecer as funções do Excel por categoria, com sintaxe e exemplos prontos para usar. Os nomes estão em **português** (Excel pt-BR) e, entre parênteses, em **inglês**.
+> **Objetivo:** aprender as funções que mais aparecem no trabalho e em testes de emprego, com exemplos prontos para copiar.
 
-## 7.1 Como funciona uma função
+## 7.1 Como se escreve uma função
 
 ```
-=NOME_DA_FUNÇÃO(argumento1; argumento2; ...)
+=NOME(o que a função precisa)
 ```
 
-- Comece com `=`, digite as primeiras letras e use `Tab` para aceitar a sugestão.
-- Argumentos entre colchetes `[ ]` na ajuda são **opcionais**.
-- Clique em **fx** (ao lado da barra de fórmulas) para abrir o assistente de funções.
+- Comece com `=` e digite as primeiras letras do nome. O Excel mostra uma lista: aperte `Tab` para escolher.
+- O que vai dentro dos parênteses é separado por **ponto e vírgula** `;`.
+- Textos vão **entre aspas**: `"Ana"`. Números e células, sem aspas.
 
-### Planilha de exemplo usada neste módulo
+### Tabela usada nos exemplos
 
 | | A | B | C | D | E |
 |---|---|---|---|---|---|
@@ -23,274 +23,163 @@
 | **5** | Carla | Sudeste | Notebook | 12/09/2026 | 3700 |
 | **6** | Bruno | Norte | Teclado | 15/09/2026 | 150 |
 
-## 7.2 Matemáticas e estatísticas básicas
+## 7.2 As básicas
 
-| Função (pt-BR) | Inglês | O que faz | Exemplo |
+| Função | O que faz | Exemplo | Resultado |
 |---|---|---|---|
-| `SOMA` | SUM | Soma valores | `=SOMA(E2:E6)` = 8630 |
-| `MÉDIA` | AVERAGE | Média aritmética | `=MÉDIA(E2:E6)` = 1726 |
-| `MÁXIMO` | MAX | Maior valor | `=MÁXIMO(E2:E6)` = 3700 |
-| `MÍNIMO` | MIN | Menor valor | `=MÍNIMO(E2:E6)` = 80 |
-| `CONT.NÚM` | COUNT | Conta células com números | `=CONT.NÚM(E2:E6)` = 5 |
-| `CONT.VALORES` | COUNTA | Conta células não vazias | `=CONT.VALORES(A2:A6)` = 5 |
-| `CONTAR.VAZIO` | COUNTBLANK | Conta células vazias | `=CONTAR.VAZIO(A2:A100)` |
-| `ARRED` | ROUND | Arredonda | `=ARRED(3,14159;2)` = 3,14 |
-| `ARREDONDAR.PARA.CIMA` | ROUNDUP | Arredonda para cima | `=ARREDONDAR.PARA.CIMA(2,1;0)` = 3 |
-| `ARREDONDAR.PARA.BAIXO` | ROUNDDOWN | Arredonda para baixo | `=ARREDONDAR.PARA.BAIXO(2,9;0)` = 2 |
-| `INT` | INT | Parte inteira | `=INT(7,8)` = 7 |
-| `TRUNCAR` | TRUNC | Corta as casas decimais | `=TRUNCAR(7,89;1)` = 7,8 |
-| `MOD` | MOD | Resto da divisão | `=MOD(10;3)` = 1 |
-| `ABS` | ABS | Valor absoluto | `=ABS(-5)` = 5 |
-| `POTÊNCIA` | POWER | Potência | `=POTÊNCIA(2;10)` = 1024 |
-| `RAIZ` | SQRT | Raiz quadrada | `=RAIZ(81)` = 9 |
-| `MULT` | PRODUCT | Multiplica valores | `=MULT(2;3;4)` = 24 |
-| `SOMARPRODUTO` | SUMPRODUCT | Soma de multiplicações | `=SOMARPRODUTO(B2:B5;C2:C5)` |
-| `MED` | MEDIAN | Mediana | `=MED(E2:E6)` = 1200 |
-| `MODO` | MODE | Valor mais frequente | `=MODO(1;2;2;3)` = 2 |
-| `MAIOR` | LARGE | k-ésimo maior | `=MAIOR(E2:E6;2)` = 3500 |
-| `MENOR` | SMALL | k-ésimo menor | `=MENOR(E2:E6;1)` = 80 |
-| `ORDEM.EQ` | RANK.EQ | Posição no ranking | `=ORDEM.EQ(E2;$E$2:$E$6)` |
-| `DESVPAD.A` | STDEV.S | Desvio padrão (amostra) | `=DESVPAD.A(E2:E6)` |
-| `ALEATÓRIOENTRE` | RANDBETWEEN | Número aleatório | `=ALEATÓRIOENTRE(1;100)` |
-| `SUBTOTAL` | SUBTOTAL | Cálculo que ignora linhas filtradas | `=SUBTOTAL(9;E2:E6)` (9 = soma) |
-| `AGREGAR` | AGGREGATE | Como SUBTOTAL, ignorando erros | `=AGREGAR(9;6;E2:E6)` |
+| `SOMA` | Soma tudo | `=SOMA(E2:E6)` | 8630 |
+| `MÉDIA` | Calcula a média | `=MÉDIA(E2:E6)` | 1726 |
+| `MÁXIMO` | Mostra o maior valor | `=MÁXIMO(E2:E6)` | 3700 |
+| `MÍNIMO` | Mostra o menor valor | `=MÍNIMO(E2:E6)` | 80 |
+| `CONT.VALORES` | Conta quantas células estão preenchidas | `=CONT.VALORES(A2:A6)` | 5 |
+| `ARRED` | Arredonda (aqui, para 2 casas) | `=ARRED(3,14159;2)` | 3,14 |
 
-## 7.3 Funções condicionais (as mais pedidas em entrevistas)
+## 7.3 SE: o Excel tomando decisões
 
-| Função | Inglês | O que faz | Exemplo |
-|---|---|---|---|
-| `SOMASE` | SUMIF | Soma com 1 condição | `=SOMASE(A2:A6;"Ana";E2:E6)` = 4700 |
-| `SOMASES` | SUMIFS | Soma com várias condições | `=SOMASES(E2:E6;B2:B6;"Norte";E2:E6;">100")` = 150 |
-| `CONT.SE` | COUNTIF | Conta com 1 condição | `=CONT.SE(C2:C6;"Notebook")` = 2 |
-| `CONT.SES` | COUNTIFS | Conta com várias condições | `=CONT.SES(A2:A6;"Ana";E2:E6;">1000")` = 2 |
-| `MÉDIASE` | AVERAGEIF | Média com condição | `=MÉDIASE(B2:B6;"Norte";E2:E6)` = 115 |
-| `MÉDIASES` | AVERAGEIFS | Média com várias condições | `=MÉDIASES(E2:E6;B2:B6;"Sul";C2:C6;"Monitor")` |
-| `MÁXIMOSES` | MAXIFS | Maior valor com condição | `=MÁXIMOSES(E2:E6;B2:B6;"Sul")` = 3500 |
-| `MÍNIMOSES` | MINIFS | Menor valor com condição | `=MÍNIMOSES(E2:E6;A2:A6;"Bruno")` = 80 |
+O `SE` faz uma pergunta e dá uma resposta para "sim" e outra para "não":
 
-### Critérios que você pode usar
-
-| Critério | Significado |
-|---|---|
-| `"Ana"` | Igual a Ana |
-| `">1000"` | Maior que 1000 |
-| `"<>Sul"` | Diferente de Sul |
-| `"*book"` | Termina com "book" (`*` = qualquer texto) |
-| `"A?a"` | `?` = um caractere qualquer |
-| `">"&H1` | Maior que o valor da célula H1 |
-| `">="&DATA(2026;9;10)` | Data a partir de 10/09/2026 |
-
-## 7.4 Funções lógicas
-
-| Função | Inglês | O que faz |
-|---|---|---|
-| `SE` | IF | Testa uma condição |
-| `E` | AND | Verdadeiro se **todas** as condições forem verdadeiras |
-| `OU` | OR | Verdadeiro se **pelo menos uma** for verdadeira |
-| `NÃO` | NOT | Inverte o resultado |
-| `SES` | IFS | Várias condições sem aninhar SE |
-| `PARÂMETRO` | SWITCH | Compara um valor com uma lista |
-| `SEERRO` | IFERROR | Valor alternativo se der erro |
-| `SENÃODISP` | IFNA | Valor alternativo para #N/D |
-| `XOU` | XOR | Ou exclusivo |
-
-### Exemplos
+```
+=SE(pergunta; resposta se SIM; resposta se NÃO)
+```
 
 ```
 =SE(E2>=1000;"Meta batida";"Abaixo da meta")
+```
 
-=SE(E(B2="Sul";E2>1000);"Bônus";"Sem bônus")
+Lê-se: "se o valor em E2 for maior ou igual a 1000, escreva *Meta batida*; se não, escreva *Abaixo da meta*".
 
-=SE(OU(C2="Notebook";C2="Monitor");"Eletrônico grande";"Acessório")
+### Sinais para as perguntas
 
+| Sinal | Significa |
+|---|---|
+| `=` | igual a |
+| `<>` | diferente de |
+| `>` / `<` | maior que / menor que |
+| `>=` / `<=` | maior ou igual / menor ou igual |
+
+### Mais de duas respostas
+
+Para três faixas (Ouro, Prata, Bronze), use `SES`:
+
+```
 =SES(E2>=3000;"Ouro";E2>=1000;"Prata";VERDADEIRO;"Bronze")
+```
 
-=PARÂMETRO(B2;"Sul";"Equipe 1";"Norte";"Equipe 2";"Outras")
+O Excel testa na ordem: se for 3000 ou mais é Ouro; se não, se for 1000 ou mais é Prata; **senão** (o `VERDADEIRO` no final), é Bronze.
 
+### Esconder erros: SEERRO
+
+```
 =SEERRO(E2/F2;0)
 ```
 
-> **SE aninhado:** `=SE(E2>=3000;"Ouro";SE(E2>=1000;"Prata";"Bronze"))` funciona em qualquer versão, mas `SES` é mais fácil de ler (Excel 2019+).
+Se a conta der erro (como dividir por zero), mostra 0 em vez do erro.
 
-## 7.5 Funções de procura e referência
+## 7.4 Somar e contar só o que interessa
 
-| Função | Inglês | O que faz |
-|---|---|---|
-| `PROCV` | VLOOKUP | Procura na 1ª coluna e retorna uma coluna à direita |
-| `PROCH` | HLOOKUP | Procura na 1ª linha e retorna uma linha abaixo |
-| `PROCX` | XLOOKUP | Procura em qualquer direção (substitui PROCV/PROCH) |
-| `ÍNDICE` | INDEX | Retorna o valor de uma posição |
-| `CORRESP` | MATCH | Retorna a posição de um valor |
-| `CORRESPX` | XMATCH | CORRESP moderno |
-| `ESCOLHER` | CHOOSE | Escolhe de uma lista pelo número |
-| `DESLOC` | OFFSET | Referência deslocada |
-| `INDIRETO` | INDIRECT | Converte texto em referência |
-| `LIN` / `COL` | ROW / COLUMN | Número da linha / coluna |
-| `LINS` / `COLS` | ROWS / COLUMNS | Quantidade de linhas / colunas |
-| `HIPERLINK` | HYPERLINK | Cria link clicável |
-| `TRANSPOR` | TRANSPOSE | Troca linhas por colunas |
+Estas são **as mais pedidas em testes de emprego**.
 
-### PROCV passo a passo
+| Função | O que faz | Exemplo | Resultado |
+|---|---|---|---|
+| `SOMASE` | Soma só o que bate com uma condição | `=SOMASE(A2:A6;"Ana";E2:E6)` | 4700 |
+| `CONT.SE` | Conta só o que bate com uma condição | `=CONT.SE(C2:C6;"Notebook")` | 2 |
+| `MÉDIASE` | Média só do que bate com uma condição | `=MÉDIASE(B2:B6;"Norte";E2:E6)` | 115 |
+| `SOMASES` | Soma com **várias** condições | `=SOMASES(E2:E6;B2:B6;"Sul";E2:E6;">1000")` | 4700 |
+| `CONT.SES` | Conta com **várias** condições | `=CONT.SES(A2:A6;"Ana";E2:E6;">1000")` | 2 |
 
-```
-=PROCV(valor_procurado; tabela; número_da_coluna; [FALSO])
-```
+**Como ler o `SOMASE`:** `=SOMASE(onde procurar; o que procurar; o que somar)`. No exemplo: procure "Ana" na coluna de vendedores e some os valores dela.
 
-Tabela de produtos em `H2:I5` (H = Produto, I = Preço):
+> **Condições com números** vão entre aspas: `">1000"` (maior que mil), `"<>Sul"` (diferente de Sul).
+
+## 7.5 Procurar uma informação: PROCV e PROCX
+
+Servem para **buscar um dado em outra tabela**. Exemplo: você tem o nome do produto e quer achar o preço dele numa lista de preços.
+
+Lista de preços em `H2:I5`:
+
+| H | I |
+|---|---|
+| Produto | Preço |
+| Mouse | 80 |
+| Teclado | 150 |
+| Monitor | 1200 |
+
+### PROCV
 
 ```
 =PROCV("Mouse";H2:I5;2;FALSO)
 ```
 
-- `"Mouse"`: o que procurar.
-- `H2:I5`: onde procurar (o valor tem que estar na **primeira coluna**).
-- `2`: retornar a 2ª coluna da tabela (Preço).
-- `FALSO` (ou `0`): correspondência **exata**. Use quase sempre!
+Lê-se: "procure **Mouse** na tabela **H2:I5** e me traga o que está na **2ª coluna** (o preço), mas só se achar **exatamente** igual (FALSO)".
 
-> **Erro #N/D?** O valor não foi encontrado. Verifique espaços extras (use `ARRUMAR`), números armazenados como texto ou se a tabela está fixa com `$`.
+> **Regras do PROCV:** o que você procura tem que estar na **primeira coluna** da tabela, e no final use sempre `FALSO`.
 
-### PROCX: o substituto moderno (Excel 365/2021+)
+### PROCX (mais fácil, Excel 365 e 2021)
 
 ```
-=PROCX(valor_procurado; coluna_procura; coluna_retorno; [se_não_encontrado])
+=PROCX("Mouse";H2:H5;I2:I5;"Não encontrado")
 ```
 
-```
-=PROCX("Mouse";H2:H5;I2:I5;"Não cadastrado")
-```
+Lê-se: "procure **Mouse** na coluna H e me traga o que está na mesma linha da coluna I. Se não achar, escreva *Não encontrado*".
 
-Vantagens: procura à esquerda, não quebra ao inserir colunas, já trata "não encontrado" e procura do último para o primeiro.
+> **Deu `#N/D`?** O Excel não encontrou o que você procurou. Normalmente é um espaço sobrando ou o nome escrito diferente.
 
-### ÍNDICE + CORRESP (funciona em todas as versões)
+## 7.6 Arrumando textos
 
-```
-=ÍNDICE(I2:I5;CORRESP("Mouse";H2:H5;0))
-```
-
-## 7.6 Funções de texto
-
-| Função | Inglês | O que faz | Exemplo |
+| Função | O que faz | Exemplo | Resultado |
 |---|---|---|---|
-| `CONCAT` | CONCAT | Junta textos | `=CONCAT(A2;" - ";B2)` = Ana - Sul |
-| `CONCATENAR` | CONCATENATE | Junta textos (versão antiga) | `=CONCATENAR(A2;B2)` |
-| `UNIRTEXTO` | TEXTJOIN | Junta com separador | `=UNIRTEXTO(", ";VERDADEIRO;A2:A6)` |
-| `ESQUERDA` | LEFT | Primeiros caracteres | `=ESQUERDA("Notebook";4)` = Note |
-| `DIREITA` | RIGHT | Últimos caracteres | `=DIREITA("12345";2)` = 45 |
-| `EXT.TEXTO` | MID | Caracteres do meio | `=EXT.TEXTO("ABC-123";5;3)` = 123 |
-| `NÚM.CARACT` | LEN | Quantidade de caracteres | `=NÚM.CARACT("Excel")` = 5 |
-| `MAIÚSCULA` | UPPER | Tudo maiúsculo | `=MAIÚSCULA("ana")` = ANA |
-| `MINÚSCULA` | LOWER | Tudo minúsculo | `=MINÚSCULA("ANA")` = ana |
-| `PRI.MAIÚSCULA` | PROPER | Primeira letra maiúscula | `=PRI.MAIÚSCULA("maria silva")` = Maria Silva |
-| `ARRUMAR` | TRIM | Remove espaços extras | `=ARRUMAR("  Ana  ")` = Ana |
-| `TIRAR` | CLEAN | Remove caracteres invisíveis | `=TIRAR(A2)` |
-| `PROCURAR` | FIND | Posição de um texto (diferencia maiúsculas) | `=PROCURAR("@";"a@b.com")` = 2 |
-| `LOCALIZAR` | SEARCH | Posição de um texto (não diferencia) | `=LOCALIZAR("book";C2)` |
-| `SUBSTITUIR` | SUBSTITUTE | Troca um texto por outro | `=SUBSTITUIR("1.234";".";"")` = 1234 |
-| `MUDAR` | REPLACE | Troca por posição | `=MUDAR("ABC";2;1;"X")` = AXC |
-| `TEXTO` | TEXT | Formata número/data como texto | `=TEXTO(D2;"dd/mm/aaaa")` |
-| `VALOR` | VALUE | Converte texto em número | `=VALOR("150")` = 150 |
-| `REPT` | REPT | Repete texto | `=REPT("*";5)` = ***** |
-| `EXATO` | EXACT | Compara textos exatamente | `=EXATO("a";"A")` = FALSO |
-| `TEXTOANTES` | TEXTBEFORE | Texto antes de um delimitador (365) | `=TEXTOANTES("ana@email.com";"@")` = ana |
-| `TEXTODEPOIS` | TEXTAFTER | Texto depois de um delimitador (365) | `=TEXTODEPOIS("ana@email.com";"@")` = email.com |
-| `DIVIDIRTEXTO` | TEXTSPLIT | Divide texto em várias células (365) | `=DIVIDIRTEXTO("a;b;c";";")` |
+| `ARRUMAR` | Tira espaços sobrando | `=ARRUMAR("  Ana  ")` | Ana |
+| `PRI.MAIÚSCULA` | Primeira letra de cada palavra maiúscula | `=PRI.MAIÚSCULA("maria silva")` | Maria Silva |
+| `MAIÚSCULA` | Tudo em maiúsculas | `=MAIÚSCULA("ana")` | ANA |
+| `ESQUERDA` | Pega as primeiras letras | `=ESQUERDA("Notebook";4)` | Note |
+| `DIREITA` | Pega as últimas letras | `=DIREITA("12345";2)` | 45 |
+| `TEXTOANTES` | Pega o que vem antes de um sinal | `=TEXTOANTES("ana@email.com";"@")` | ana |
+| `TEXTODEPOIS` | Pega o que vem depois de um sinal | `=TEXTODEPOIS("ana@email.com";"@")` | email.com |
 
-> **Concatenar com `&`:** `=A2&" vendeu R$ "&TEXTO(E2;"#.##0,00")` resulta em "Ana vendeu R$ 3.500,00".
+**Juntar textos:** use o `&`.
 
-## 7.7 Funções de data e hora
+```
+=A2&" - "&B2
+```
 
-| Função | Inglês | O que faz | Exemplo |
-|---|---|---|---|
-| `HOJE` | TODAY | Data de hoje | `=HOJE()` |
-| `AGORA` | NOW | Data e hora atuais | `=AGORA()` |
-| `DATA` | DATE | Monta uma data | `=DATA(2026;10;3)` |
-| `DIA` / `MÊS` / `ANO` | DAY / MONTH / YEAR | Extrai partes da data | `=MÊS(D2)` = 9 |
-| `HORA` / `MINUTO` / `SEGUNDO` | HOUR / MINUTE / SECOND | Partes da hora | `=HORA(AGORA())` |
-| `DIA.DA.SEMANA` | WEEKDAY | Dia da semana (1 = domingo) | `=DIA.DA.SEMANA(D2)` |
-| `NÚMSEMANA` | WEEKNUM | Número da semana no ano | `=NÚMSEMANA(D2)` |
-| `DIATRABALHO` | WORKDAY | Data após N dias úteis | `=DIATRABALHO(D2;10)` |
-| `DIATRABALHOTOTAL` | NETWORKDAYS | Dias úteis entre datas | `=DIATRABALHOTOTAL(D2;D6)` |
-| `DATAM` | EDATE | Soma meses | `=DATAM(D2;3)` (3 meses depois) |
-| `FIMMÊS` | EOMONTH | Último dia do mês | `=FIMMÊS(D2;0)` = 30/09/2026 |
-| `DATADIF` | DATEDIF | Diferença em anos/meses/dias | `=DATADIF(nascimento;HOJE();"y")` (idade) |
-| `DATA.VALOR` | DATEVALUE | Texto em data | `=DATA.VALOR("03/10/2026")` |
+Resultado: `Ana - Sul`.
 
-> Subtrair datas dá a diferença em dias: `=D6-D2` = 10.
+> **Atalho mágico (`Ctrl + E`):** na coluna ao lado, digite o primeiro resultado que você quer (ex.: só o primeiro nome) e aperte `Ctrl + E`. O Excel entende o padrão e completa o resto sozinho, sem fórmula!
 
-## 7.8 Funções de informação e erros
+## 7.7 Datas
 
-| Função | Inglês | O que faz |
+| Função | O que faz | Exemplo |
 |---|---|---|
-| `ÉCÉL.VAZIA` | ISBLANK | Célula está vazia? |
-| `ÉNÚM` | ISNUMBER | É número? |
-| `ÉTEXTO` | ISTEXT | É texto? |
-| `ÉERRO` / `ÉERROS` | ISERR / ISERROR | É erro? |
-| `É.NÃO.DISP` | ISNA | É #N/D? |
-| `ÉFÓRMULA` | ISFORMULA | Contém fórmula? |
-| `NÃO.DISP` | NA | Gera #N/D |
+| `HOJE` | Data de hoje (atualiza todo dia) | `=HOJE()` |
+| `DIA` / `MÊS` / `ANO` | Pega só o dia, o mês ou o ano | `=MÊS(D2)` dá 9 |
+| `DATADIF` | Diferença em anos completos (ex.: idade) | `=DATADIF(nascimento;HOJE();"y")` |
+| `DIATRABALHOTOTAL` | Quantos dias úteis entre duas datas | `=DIATRABALHOTOTAL(D2;D6)` |
 
-### Erros comuns
+> **Conta com datas:** subtrair uma data de outra dá os dias entre elas (`=D6-D2` dá 10). Somar números a uma data anda para frente: `=D2+90` é 90 dias depois.
 
-| Erro | Causa | Solução |
+## 7.8 Os erros e o que eles querem dizer
+
+| Erro | O que aconteceu | Como resolver |
 |---|---|---|
-| `#DIV/0!` | Divisão por zero | `=SEERRO(A1/B1;0)` |
-| `#N/D` | Valor não encontrado (PROCV/PROCX) | Conferir o valor; usar SEERRO ou o 4º argumento do PROCX |
-| `#NOME?` | Nome de função digitado errado | Verificar a grafia (ou usar nome em inglês no Excel pt-BR) |
-| `#VALOR!` | Tipo errado (texto em conta) | Converter com VALOR, limpar espaços |
-| `#REF!` | Referência apagada | Desfazer ou refazer a fórmula |
-| `#NÚM!` | Número inválido | Revisar o cálculo |
-| `#DESPEJAR!` (#SPILL!) | Fórmula dinâmica sem espaço livre | Limpar as células abaixo/ao lado |
-| `#####` | Coluna estreita | Aumentar a largura da coluna |
+| `#####` | A coluna está estreita demais | Aumente a largura da coluna |
+| `#DIV/0!` | Divisão por zero (ou por célula vazia) | Confira os números ou use `SEERRO` |
+| `#N/D` | O PROCV/PROCX não encontrou | Confira se está escrito igual |
+| `#NOME?` | Nome da função escrito errado | Confira a escrita (acentos contam!) |
+| `#VALOR!` | Conta com texto no meio | Veja se tem texto onde deveria ter número |
+| `#REF!` | Uma célula usada na conta foi apagada | `Ctrl + Z` ou refaça a fórmula |
 
-## 7.9 Funções financeiras
-
-| Função | Inglês | O que faz | Exemplo |
-|---|---|---|---|
-| `PGTO` | PMT | Valor da parcela | `=PGTO(2%;12;-10000)` = parcela de 10 mil em 12x a 2% a.m. |
-| `VF` | FV | Valor futuro | `=VF(1%;24;-500)` (guardar 500/mês por 2 anos) |
-| `VP` | PV | Valor presente | `=VP(1%;12;-1000)` |
-| `TAXA` | RATE | Taxa de juros | `=TAXA(12;-950;10000)` |
-| `NPER` | NPER | Número de parcelas | `=NPER(2%;-500;5000)` |
-| `VPL` | NPV | Valor presente líquido | `=VPL(10%;B2:B6)` |
-| `TIR` | IRR | Taxa interna de retorno | `=TIR(B1:B6)` |
-
-## 7.10 Funções de matriz dinâmica (Excel 365 / 2021+)
-
-Estas funções "despejam" o resultado em várias células automaticamente.
-
-| Função | Inglês | O que faz | Exemplo |
-|---|---|---|---|
-| `FILTRO` | FILTER | Filtra dados por condição | `=FILTRO(A2:E6;B2:B6="Sul";"Nada")` |
-| `CLASSIFICAR` | SORT | Ordena | `=CLASSIFICAR(A2:E6;5;-1)` (por Valor, decrescente) |
-| `CLASSIFICARPOR` | SORTBY | Ordena por outra coluna | `=CLASSIFICARPOR(A2:A6;E2:E6;-1)` |
-| `ÚNICO` | UNIQUE | Lista sem repetições | `=ÚNICO(A2:A6)` = Ana, Bruno, Carla |
-| `SEQUÊNCIA` | SEQUENCE | Gera sequência | `=SEQUÊNCIA(10)` = 1 a 10 |
-| `MATRIZALEATÓRIA` | RANDARRAY | Números aleatórios | `=MATRIZALEATÓRIA(5)` |
-| `EMPILHARV` | VSTACK | Empilha tabelas | `=EMPILHARV(Jan!A2:C10;Fev!A2:C10)` |
-| `ESCOLHERCOLS` | CHOOSECOLS | Escolhe colunas | `=ESCOLHERCOLS(A2:E6;1;5)` |
-| `LET` | LET | Cria variáveis na fórmula | `=LET(total;SOMA(E2:E6);total*0,1)` |
-| `LAMBDA` | LAMBDA | Cria sua própria função | Ver Módulo 8 |
-
-Combinação poderosa: total vendido por vendedor, ordenado:
+## 7.9 Bônus: lista sem repetição (Excel 365)
 
 ```
-=CLASSIFICAR(ÚNICO(A2:A6))          (lista de vendedores em G2)
-=SOMASE(A2:A6;G2#;E2:E6)             (total de cada um; G2# = todo o resultado despejado)
+=ÚNICO(A2:A6)
 ```
 
-## 7.11 Dicas de ouro
-
-1. Use `F9` em um pedaço selecionado da fórmula para ver o resultado parcial (depois `Esc`).
-2. **Fórmulas > Avaliar Fórmula** mostra o cálculo passo a passo.
-3. **Fórmulas > Rastrear Precedentes** mostra de onde vêm os dados.
-4. Dê **nomes** a intervalos (Caixa de Nome ou Fórmulas > Definir Nome): `=SOMA(Vendas)` é mais claro que `=SOMA(E2:E6)`.
-5. Não sabe o nome de uma função? Peça ao ChatGPT (Módulo 10)!
+Mostra a lista de vendedores sem repetir: Ana, Bruno, Carla.
 
 ## Resumo do módulo
 
 - Básicas: `SOMA`, `MÉDIA`, `MÁXIMO`, `MÍNIMO`, `CONT.VALORES`.
-- Condicionais: `SE`, `SOMASES`, `CONT.SES`, `SEERRO`.
-- Procura: `PROCV` (com FALSO), `PROCX`, `ÍNDICE`+`CORRESP`.
-- Texto: `ARRUMAR`, `ESQUERDA`, `TEXTO`, `&`.
-- Datas: `HOJE`, `DATADIF`, `DIATRABALHOTOTAL`.
-- Modernas: `FILTRO`, `ÚNICO`, `CLASSIFICAR`.
+- Decisão: `SE` e `SES`.
+- Com condição: `SOMASE`, `CONT.SE`, `SOMASES`.
+- Procurar: `PROCV` (sempre com `FALSO`) ou `PROCX`.
+- Textos: `ARRUMAR`, `PRI.MAIÚSCULA`, `&` e o atalho `Ctrl + E`.
